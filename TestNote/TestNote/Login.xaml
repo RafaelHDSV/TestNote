@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNote.Login"
+             Title="Login">
+    <VerticalStackLayout Padding="30" Spacing="20"
+                         VerticalOptions="Center">
+
+        <Label Text="Bem-vindo"
+               FontSize="28"
+               HorizontalOptions="Center"
+               TextColor="#d3d3d3" />
+
+        <Entry x:Name="EmailEntry"
+               Placeholder="Insira o seu email"
+               Keyboard="Email"
+               ClearButtonVisibility="WhileEditing"
+               BackgroundColor="White"
+               TextColor="#000"
+               HeightRequest="45"
+               />
+
+        <Entry x:Name="PasswordEntry"
+               Placeholder="Insira a sua senha"
+               IsPassword="True"
+               ClearButtonVisibility="WhileEditing"
+               BackgroundColor="White"
+               TextColor="#000"
+               HeightRequest="45"
+               />
+
+        <Button Text="Entrar"
+                BackgroundColor="#1976D2"
+                TextColor="White"
+                CornerRadius="8"
+                HeightRequest="45"
+                Clicked="GoToCompanies"
+                />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Esqueceu sua senha?"
+                   FontSize="12"
+                   TextColor="#555" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
