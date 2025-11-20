@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TestNote"
+    xmlns:views="clr-namespace:TestNote.Views"
     Title="TestNote">
 
     <ShellContent
@@ -14,6 +15,11 @@
     <ShellContent
         Title="Empresas"
         ContentTemplate="{DataTemplate local:Companies}"
-        Route="Empresas" />
+        Route="Companies" />
+
+    <ShellContent
+        Title="Detalhes de Empresa"
+        ContentTemplate="{DataTemplate views:CompanyDetails}"
+        Route="CompanyDetails" />
 
 </Shell>

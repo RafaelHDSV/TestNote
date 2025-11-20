@@ -6,7 +6,6 @@
     x:Class="TestNote.Companies"
     Title="Empresas">
 
-    <!-- DEFININDO O VIEWMODEL AQUI -->
     <ContentPage.BindingContext>
         <vm:CompaniesViewModel />
     </ContentPage.BindingContext>
@@ -15,7 +14,8 @@
 
         <CollectionView 
             ItemsSource="{Binding Companies}"
-            SelectionMode="Single">
+            SelectionMode="Single"
+            SelectionChanged="OnCompanySelected">
 
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="2" />
