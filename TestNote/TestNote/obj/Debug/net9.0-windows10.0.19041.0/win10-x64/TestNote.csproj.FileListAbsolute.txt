@@ -1031,3 +1031,4 @@ C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\obj\Debug\net9.0-wind
 C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MainPage.xaml
 C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\MainPage.xaml
+C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll

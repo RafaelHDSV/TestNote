@@ -3,6 +3,11 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net9.0-android
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -30,18 +35,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = TestNote.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Companies.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Companies.xaml
-build_metadata.AdditionalFiles.TargetPath = Companies.xaml
-build_metadata.AdditionalFiles.RelativePath = Companies.xaml
-
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Login.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Login.xaml
-build_metadata.AdditionalFiles.TargetPath = Login.xaml
-build_metadata.AdditionalFiles.RelativePath = Login.xaml
-
 [C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Resources.Styles.Colors.xaml
@@ -53,3 +46,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Companies.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Companies.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Companies.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Companies.xaml
+
+[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml

@@ -13,5 +13,8 @@ namespace TestNote.Models
         public string Owner { get; set; } = string.Empty;
         public string Sector { get; set; } = string.Empty;
         public int NumberOfEmployees { get; set; }
+
+
+        public string DisplayName => $"{Id} - {Name}";
     }
 }

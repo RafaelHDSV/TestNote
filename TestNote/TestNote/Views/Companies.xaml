@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:TestNote.ViewModels"
+    x:Class="TestNote.Companies"
+    Title="Empresas">
+
+    <!-- DEFININDO O VIEWMODEL AQUI -->
+    <ContentPage.BindingContext>
+        <vm:CompaniesViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid Padding="20">
+
+        <CollectionView 
+            ItemsSource="{Binding Companies}"
+            SelectionMode="Single">
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="16" Padding="15"
+                           StrokeShape="RoundRectangle 16"
+                           BackgroundColor="White">
+
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="{Binding DisplayName}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#222" />
+
+                            <HorizontalStackLayout Spacing="6">
+                                <Label Text="Dono:"
+                                    FontSize="13"
+                                    TextColor="#444"
+                                    FontAttributes="Bold"
+                                    LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Owner}"
+                                    FontSize="13"
+                                    TextColor="#444"
+                                    LineBreakMode="TailTruncation" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Spacing="6">
+                                <Label Text="Setor:"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Sector}"
+                                       FontSize="13"
+                                       TextColor="#444"
+                                       LineBreakMode="TailTruncation" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Spacing="6">
+                                <Label Text="N° Funcionários:"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding NumberOfEmployees}"
+                                       FontSize="13"
+                                       TextColor="#444"
+                                       LineBreakMode="TailTruncation" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
