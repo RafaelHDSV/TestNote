@@ -34,7 +34,7 @@
                 TextColor="White"
                 CornerRadius="8"
                 HeightRequest="45"
-                Clicked="GoToCompanies"
+                Clicked="LoginFunction"
                 />
 
         <HorizontalStackLayout HorizontalOptions="Center">

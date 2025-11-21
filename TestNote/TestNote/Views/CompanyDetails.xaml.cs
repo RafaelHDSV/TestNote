@@ -6,15 +6,15 @@ namespace TestNote.Views;
 [QueryProperty(nameof(Company), "Company")]
 public partial class CompanyDetails : ContentPage
 {
-    private Company _company;
-    public Company Company
+    private Company? _company;
+    public Company? Company
     {
         get => _company;
         set
         {
             _company = value;
             // Ao receber a Company, cria o VM com notificação
-            BindingContext = new CompanyDetailViewModel(_company);
+            BindingContext = new CompanyDetailViewModel(_company!);
         }
     }
 

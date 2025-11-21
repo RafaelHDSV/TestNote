@@ -59,6 +59,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.CompanyDeta
 build_metadata.AdditionalFiles.TargetPath = Views\CompanyDetails.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CompanyDetails.xaml
 
+[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/CompanyTests.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.CompanyTests.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CompanyTests.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CompanyTests.xaml
+
+[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Employees.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Employees.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Employees.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Employees.xaml
+
 [C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Login.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Login.xaml

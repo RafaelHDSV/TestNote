@@ -9,6 +9,10 @@ namespace TestNote
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(CompanyDetails), typeof(CompanyDetails));
+
+            Routing.RegisterRoute(nameof(Employees), typeof(Employees));
+
+            Routing.RegisterRoute(nameof(CompanyTests), typeof(CompanyTests));
         }
     }
 }

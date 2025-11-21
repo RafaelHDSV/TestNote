@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:TestNote.ViewModels"
+    xmlns:models="clr-namespace:TestNote.Models"
     x:Class="TestNote.Companies"
+    x:DataType="vm:CompaniesViewModel"
     Title="Empresas">
 
     <ContentPage.BindingContext>
@@ -22,10 +24,12 @@
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border Margin="16" Padding="15"
-                           StrokeShape="RoundRectangle 16"
-                           BackgroundColor="White">
+                <DataTemplate x:DataType="models:Company">
+                    <Border 
+                        Margin="16" 
+                        Padding="15"
+                        StrokeShape="RoundRectangle 16"
+                        BackgroundColor="White">
 
                         <VerticalStackLayout Spacing="6">
                             <Label Text="{Binding DisplayName}"

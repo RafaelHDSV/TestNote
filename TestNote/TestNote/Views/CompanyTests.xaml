@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels" 
+             xmlns:models="clr-namespace:TestNote.Models"
+             x:DataType="vm:CompanyTestsViewModel"
+             x:Class="TestNote.Views.CompanyTests"
+             Title="CompanyTests">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <ActivityIndicator Grid.Row="0" 
+                           IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           Color="#34C759"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Start"
+                           Margin="10"/>
+
+        <VerticalStackLayout Grid.Row="1" Padding="20">
+
+            <Label Text="{Binding Company.Name, StringFormat='Testes para {0}'}" 
+                   FontSize="22" 
+                   FontAttributes="Bold" 
+                   Margin="0,0,0,15"/>
+
+            <CollectionView
+                ItemsSource="{Binding Tests}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Test">
+                        <Border Margin="0,8" Padding="15"
+                                StrokeShape="RoundRectangle 10"
+                                BackgroundColor="White"
+                                HorizontalOptions="Fill"
+                                Shadow="{OnPlatform Android='0,5,10,Gray', iOS='0,2,4,#ccc'}">
+
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="{Binding Title}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="#222" />
+
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Status:" FontAttributes="Bold" TextColor="#555" FontSize="13"/>
+                                    <Label Text="{Binding Status}" 
+                                           TextColor="{Binding Status, Converter={StaticResource TestStatusColorConverter}}" 
+                                           FontSize="13"/>
+                                </HorizontalStackLayout>
+
+                                <Label Text="Itens do Teste:" FontAttributes="Bold" Margin="0,5,0,0" FontSize="14"/>
+                                <StackLayout BindableLayout.ItemsSource="{Binding TestItems}" Margin="10,0,0,0">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}" FontSize="13" TextColor="#444"/>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Nenhum teste encontrado para esta empresa."
+                   IsVisible="{Binding Tests.Count, Converter={StaticResource EmptyCollectionToBoolConverter}}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,50,0,0"
+                   TextColor="#777"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

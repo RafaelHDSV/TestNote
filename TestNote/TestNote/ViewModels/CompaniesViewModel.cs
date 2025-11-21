@@ -13,10 +13,10 @@ namespace TestNote.ViewModels
     public partial class CompaniesViewModel : ObservableObject
     {
         [ObservableProperty]
-        private ObservableCollection<Company> companies = [];
+        public ObservableCollection<Company> companies = [];
 
         [ObservableProperty]
-        private bool isLoading;
+        public bool isLoading; // Corrigido para Campo Privado
 
         public CompaniesViewModel()
         {
@@ -27,6 +27,9 @@ namespace TestNote.ViewModels
 
         private async Task LoadCompaniesAsync()
         {
+            IsLoading = true;
+
+            await Task.Delay(500);
             var data = new List<Company>
             {
                 new Company { Id = 1, Name = "Alpha Corp", Owner = "Daniel Moreira", Sector = "Tecnologia e Inovação", NumberOfEmployees = 15 },
@@ -42,6 +45,8 @@ namespace TestNote.ViewModels
             };
 
             Companies = new ObservableCollection<Company>(data);
+
+            IsLoading = false;
         }
     }
 }

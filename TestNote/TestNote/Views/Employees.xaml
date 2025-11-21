@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels" 
+             xmlns:models="clr-namespace:TestNote.Models"
+             x:DataType="vm:EmployeesViewModel"
+             x:Class="TestNote.Views.Employees"
+             Title="Employees">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <ActivityIndicator Grid.Row="0" 
+                           IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           Color="#1976D2"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Start"
+                           Margin="10"/>
+
+        <VerticalStackLayout Grid.Row="1" Padding="20">
+
+            <Label Text="{Binding Company.Name, StringFormat='Lista de Funcionários ({0})'}" 
+                   FontSize="22" 
+                   FontAttributes="Bold" 
+                   Margin="0,0,0,15"
+                   IsVisible="{Binding Company, Converter={StaticResource NullToBoolConverter}}"/>
+            <CollectionView
+                ItemsSource="{Binding Employees}"
+                SelectionMode="Single">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Employee">
+                        <Border Margin="0,5" Padding="15"
+                                StrokeShape="RoundRectangle 8"
+                                BackgroundColor="White"
+                                HorizontalOptions="Fill">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="{Binding DisplayName}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#222" />
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Email:" FontAttributes="Bold" TextColor="#555" FontSize="12"/>
+                                    <Label Text="{Binding Email}" TextColor="#555" FontSize="12"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Nível de Acesso:" FontAttributes="Bold" TextColor="#555" FontSize="12"/>
+                                    <Label Text="{Binding RoleName}" 
+                                           TextColor="{Binding AccessLevel, Converter={StaticResource AccessLevelColorConverter}}" 
+                                           FontSize="12"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Nenhum funcionário encontrado para esta empresa."
+                   IsVisible="{Binding Employees.Count, Converter={StaticResource EmptyCollectionToBoolConverter}}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,50,0,0"
+                   TextColor="#777"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

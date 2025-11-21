@@ -4,11 +4,83 @@
         <name>TestNote</name>
     </assembly>
     <members>
+        <member name="T:TestNote.ViewModels.CompaniesViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.Companies">
+            <inheritdoc cref="F:TestNote.ViewModels.CompaniesViewModel.companies"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.CompaniesViewModel.isLoading"/>
+        </member>
+        <member name="T:TestNote.ViewModels.CompanyTestsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.Company">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyTestsViewModel.company"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.Tests">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyTestsViewModel.tests"/>
+        </member>
+        <member name="T:TestNote.ViewModels.EmployeesViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.Company">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.company"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.Employees">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.employees"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.isLoading"/>
+        </member>
         <member name="T:TestNote.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Companies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Companies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Company">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Company" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tests">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tests" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Companies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Companies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Company">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Company" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tests">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tests" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employees" generated properties.</summary>
         </member>
     </members>
 </doc>
