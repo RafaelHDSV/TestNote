@@ -13,14 +13,19 @@ public partial class CompanyDetails : ContentPage
         set
         {
             _company = value;
-            // Ao receber a Company, cria o VM com notificação
-            BindingContext = new CompanyDetailViewModel(_company!);
+            if (BindingContext is CompanyDetailViewModel vm && _company != null)
+            {
+                vm.Company = _company;
+            }
         }
     }
 
-    public CompanyDetails()
+    public CompanyDetails(CompanyDetailViewModel viewModel)
     {
         InitializeComponent();
-        // Não setar BindingContext aqui; será setado quando Company for injetada.
+
+        // Definimos o BindingContext aqui. 
+        // O MAUI já entregou o viewModel com o DatabaseService configurado.
+        BindingContext = viewModel;
     }
 }

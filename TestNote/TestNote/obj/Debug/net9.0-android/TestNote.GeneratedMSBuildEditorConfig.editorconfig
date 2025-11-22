@@ -17,62 +17,68 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TestNote
-build_property.ProjectDir = C:\Users\rafae\OneDrive\Desktop\TestNote\TestNote\TestNote\
+build_property.ProjectDir = C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/App.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/AppShell.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Resources/Styles/Colors.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Resources/Styles/Styles.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Companies.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/Companies.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Companies.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Companies.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Companies.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/CompanyDetails.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/CompanyDetails.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.CompanyDetails.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CompanyDetails.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CompanyDetails.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/CompanyTests.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/CompanyTests.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.CompanyTests.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CompanyTests.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CompanyTests.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Employees.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/Employees.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Employees.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Employees.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Employees.xaml
 
-[C:/Users/rafae/OneDrive/Desktop/TestNote/TestNote/TestNote/Views/Login.xaml]
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/Login.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.Login.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
+
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/ManageEmployeesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.ManageEmployeesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ManageEmployeesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ManageEmployeesPage.xaml

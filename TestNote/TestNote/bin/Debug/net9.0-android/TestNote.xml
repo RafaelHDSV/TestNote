@@ -13,6 +13,15 @@
         <member name="P:TestNote.ViewModels.CompaniesViewModel.IsLoading">
             <inheritdoc cref="F:TestNote.ViewModels.CompaniesViewModel.isLoading"/>
         </member>
+        <member name="T:TestNote.ViewModels.CompanyDetailViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyDetailViewModel.addManagerCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyDetailViewModel.AddManagerCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyDetailViewModel.AddManagerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyDetailViewModel.AddManagerAsync"/>.</summary>
+        </member>
         <member name="T:TestNote.ViewModels.CompanyTestsViewModel">
             <inheritdoc/>
         </member>
@@ -33,6 +42,34 @@
         </member>
         <member name="P:TestNote.ViewModels.EmployeesViewModel.IsLoading">
             <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.isLoading"/>
+        </member>
+        <member name="T:TestNote.ViewModels.ManageEmployeesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId">
+            <inheritdoc cref="F:TestNote.ViewModels.ManageEmployeesViewModel.companyId"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.Employees">
+            <inheritdoc cref="F:TestNote.ViewModels.ManageEmployeesViewModel.employees"/>
+        </member>
+        <member name="M:TestNote.ViewModels.ManageEmployeesViewModel.OnCompanyIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId"/> is changed.</remarks>
+        </member>
+        <member name="F:TestNote.ViewModels.ManageEmployeesViewModel.loadEmployeesCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployeesCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployeesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployees"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.ManageEmployeesViewModel.createEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployee"/>.</summary>
         </member>
         <member name="T:TestNote.Resource">
             <summary>
@@ -61,6 +98,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employees">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employees" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompanyId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompanyId" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -81,6 +121,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employees">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompanyId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompanyId" generated properties.</summary>
         </member>
     </members>
 </doc>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafae\\OneDrive\\Desktop\\TestNote\\TestNote\\TestNote\\TestNote.csproj": {}
+    "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplicações em Ambientes Móveis\\TestNote\\TestNote\\TestNote\\TestNote.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafae\\OneDrive\\Desktop\\TestNote\\TestNote\\TestNote\\TestNote.csproj": {
+    "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplicações em Ambientes Móveis\\TestNote\\TestNote\\TestNote\\TestNote.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\OneDrive\\Desktop\\TestNote\\TestNote\\TestNote\\TestNote.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplicações em Ambientes Móveis\\TestNote\\TestNote\\TestNote\\TestNote.csproj",
         "projectName": "TestNote",
-        "projectPath": "C:\\Users\\rafae\\OneDrive\\Desktop\\TestNote\\TestNote\\TestNote\\TestNote.csproj",
+        "projectPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplicações em Ambientes Móveis\\TestNote\\TestNote\\TestNote\\TestNote.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\OneDrive\\Desktop\\TestNote\\TestNote\\TestNote\\obj\\",
+        "outputPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplicações em Ambientes Móveis\\TestNote\\TestNote\\TestNote\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -84,6 +84,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -127,6 +131,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -170,6 +178,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -208,6 +220,10 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.82, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [

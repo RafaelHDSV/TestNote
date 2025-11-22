@@ -13,6 +13,8 @@ namespace TestNote
             Routing.RegisterRoute(nameof(Employees), typeof(Employees));
 
             Routing.RegisterRoute(nameof(CompanyTests), typeof(CompanyTests));
+
+            Routing.RegisterRoute(nameof(ManageEmployeesPage), typeof(ManageEmployeesPage));
         }
     }
 }

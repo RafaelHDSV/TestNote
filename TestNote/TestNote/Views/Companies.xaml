@@ -8,10 +8,6 @@
     x:DataType="vm:CompaniesViewModel"
     Title="Empresas">
 
-    <ContentPage.BindingContext>
-        <vm:CompaniesViewModel />
-    </ContentPage.BindingContext>
-
     <Grid Padding="20">
 
         <CollectionView 

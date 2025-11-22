@@ -2,17 +2,29 @@ using System.Collections.ObjectModel;
 using TestNote.Models;
 using TestNote.ViewModels;
 using TestNote.Views;
+using Microsoft.Maui.Controls;
 
 namespace TestNote;
 
 public partial class Companies : ContentPage
 {
-    public Companies()
+    public Companies(CompaniesViewModel viewModel)
 	{
 		InitializeComponent();
+        BindingContext = viewModel;
+    }
 
-        var vm = (CompaniesViewModel)BindingContext;
-        vm.LoadCompaniesCommand.ExecuteAsync(null);
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        // 1. Acessa o ViewModel
+        if (BindingContext is CompaniesViewModel viewModel)
+        {
+            // 2. Executa o comando de forma assíncrona.
+            // Isso chama LoadCompaniesAsync() no seu ViewModel.
+            await viewModel.LoadCompaniesCommand.ExecuteAsync(null);
+        }
     }
 
     private async void OnCompanySelected(object sender, SelectionChangedEventArgs e)

@@ -6,11 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestNote.Models;
+using TestNote.Services;
 
 namespace TestNote.ViewModels
 {
     public partial class EmployeesViewModel : ObservableObject
     {
+        private readonly DatabaseService _databaseService;
+
         [ObservableProperty]
         private Company? company;
 
@@ -20,29 +23,22 @@ namespace TestNote.ViewModels
         [ObservableProperty]
         private bool isLoading;
 
-        public EmployeesViewModel() { }
+        public EmployeesViewModel(DatabaseService databaseService)
+        {
+            _databaseService = databaseService;
+        }
 
         public async Task LoadEmployeesAsync(int companyId)
         {
             IsLoading = true;
 
-            var allEmployeesData = new List<Employee>
-            {
-                new Employee { Id = 1, Name = "Admin User", Email = "admin@company.com", CompanyId = 1, AccessLevel = 1 },
-                new Employee { Id = 2, Name = "Gerente A", Email = "manager.a@company.com", CompanyId = 1, AccessLevel = 2 },
-                new Employee { Id = 3, Name = "Funcionário 1", Email = "func1@company.com", CompanyId = 1, AccessLevel = 3 },
+            // 1. Removemos a lista fixa 'allEmployeesData' que causava os erros CS0117.
 
-                new Employee { Id = 4, Name = "Gerente B", Email = "manager.b@company.net", CompanyId = 2, AccessLevel = 2 },
-                new Employee { Id = 5, Name = "Funcionário 2", Email = "func2@company.net", CompanyId = 2, AccessLevel = 3 },
+            // 2. Buscamos do banco de dados usando o método que criamos no passo anterior
+            var dbEmployees = await _databaseService.GetEmployeesByCompanyAsync(companyId);
 
-                new Employee { Id = 6, Name = "Funcionário 3", Email = "func3@company.org", CompanyId = 3, AccessLevel = 3 },
-            };
-
-            var filteredEmployees = allEmployeesData.Where(e => e.CompanyId == companyId);
-            Employees = new ObservableCollection<Employee>(filteredEmployees);
-
-            // Simulação de delay
-            await Task.Delay(500);
+            // 3. Atualizamos a lista observável
+            Employees = new ObservableCollection<Employee>(dbEmployees);
 
             IsLoading = false;
         }

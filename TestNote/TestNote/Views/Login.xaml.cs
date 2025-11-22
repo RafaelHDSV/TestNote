@@ -1,55 +1,58 @@
-﻿namespace TestNote;
+﻿using TestNote.Models;
+using TestNote.Services;
+using TestNote.Views;
+
+namespace TestNote;
 
 public partial class Login : ContentPage
 {
-	public Login()
+    private readonly DatabaseService _databaseService;
+
+    public Login()
 	{
 		InitializeComponent();
-	}
 
+        var serviceProvider = Application.Current?.Handler?.MauiContext?.Services;
+        if (serviceProvider != null)
+        {
+            _databaseService = serviceProvider.GetService<DatabaseService>()!;
+        }
+    }
+
+    // ...
     async void LoginFunction(object sender, EventArgs e)
     {
-        // ⚠️ SIMULAÇÃO DO NÍVEL DE ACESSO COM BASE NO EMAIL PARA FINS DE TESTE
-        // Na vida real, você faria uma chamada de serviço para autenticar e obter o nível.
-        string? email = EmailEntry.Text?.ToLower();
-        int accessLevel = 3; // Padrão: Funcionário
+        var user = await _databaseService.LoginAsync(EmailEntry.Text, PasswordEntry.Text);
 
-        if (email?.Contains("admin") == true)
+        if (user == null)
         {
-            accessLevel = 1; // Admin
-        }
-        else if (email?.Contains("manager") == true)
-        {
-            accessLevel = 2; // Gerente
+            await DisplayAlert("Erro", "Falha no login", "OK");
+            return;
         }
 
-        // 1. O admin deve ir para a listagem de Empresas (como o fluxo no diagrama)
-        if (accessLevel == 1)
+        if (user.Role == 1) // Admin
         {
-            // Navega para a página de listagem de empresas (Empresas.xaml)
+            // Admin vê todas as empresas
             await Shell.Current.GoToAsync($"//{nameof(Companies)}");
         }
-        // 2. O gerente deve ir para a listagem de Empresas, mas com menu "Informação" e "Testes"
-        else if (accessLevel == 2)
+        else if (user.Role == 2) // Manager
         {
-            // Poderia ir para a mesma Companies, mas a navegação/UI interna seria diferente
-            await Shell.Current.GoToAsync($"//{nameof(Companies)}?level=gerente");
-        }
-        // 3. O funcionário vai direto para os Testes
-        else if (accessLevel == 3)
-        {
-            // O Funcionário não vê empresas, vai direto para a tela de testes.
-            // Precisamos criar essa tela: EmployeeTestsView
-            // await Shell.Current.GoToAsync($"//{nameof(EmployeeTestsView)}");
-            await Shell.Current.DisplayAlert("Acesso", "Funcionário acessa a tela de Testes.", "OK");
-        }
-        else
-        {
-            await Shell.Current.DisplayAlert("Erro", "Credenciais inválidas ou nível de acesso desconhecido.", "OK");
-        }
+            // Precisamos saber QUAL empresa esse gerente cuida
+            var managerProfile = await _databaseService.GetManagerByUserIdAsync(user.Id);
 
-        // Ações pós-login:
-        EmailEntry.Text = string.Empty;
-        PasswordEntry.Text = string.Empty;
+            if (managerProfile != null)
+            {
+                // Vai para uma tela de gestão de funcionários da empresa dele
+                // Vamos criar essa tela: ManageEmployeesPage
+                await Shell.Current.GoToAsync($"{nameof(ManageEmployeesPage)}?companyId={managerProfile.CompanyId}");
+            }
+        }
+        else if (user.Role == 3) // Employee
+        {
+            // Employee vê seus testes
+            var empProfile = await _databaseService.GetEmployeeByUserIdAsync(user.Id);
+            await Shell.Current.DisplayAlert("Ola", $"Funcionario: {empProfile?.Name}", "OK");
+            // await Shell.Current.GoToAsync($"{nameof(EmployeeTests)}?employeeId={empProfile.Id}");
+        }
     }
 }

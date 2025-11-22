@@ -1,15 +1,19 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Controls;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Microsoft.Maui.Controls;
 using TestNote.Models;
+using TestNote.Services;
 using TestNote.Views;
 
 namespace TestNote.ViewModels;
 
-public class CompanyDetailViewModel : INotifyPropertyChanged
+public partial class CompanyDetailViewModel : INotifyPropertyChanged
 {
+    private readonly DatabaseService _databaseService;
+
     private Company? company;
     public Company? Company
     {
@@ -22,18 +26,17 @@ public class CompanyDetailViewModel : INotifyPropertyChanged
     public ICommand OpenEmployeesCommand { get; }
     public ICommand GoBackCommand { get; }
 
-    public CompanyDetailViewModel()
+    public CompanyDetailViewModel(DatabaseService databaseService)
     {
+        _databaseService = databaseService;
+
         EditCompanyCommand = new Command(() => OnEdit());
         OpenTestsCommand = new Command(() => OnOpenTests());
         OpenEmployeesCommand = new Command(() => OnOpenEmployees());
         GoBackCommand = new Command(async () => await OnBack());
     }
 
-    public CompanyDetailViewModel(Company company) : this()
-    {
-        Company = company;
-    }
+    public CompanyDetailViewModel() : this(null!) { }
 
     private void OnEdit()
     {
@@ -65,6 +68,23 @@ public class CompanyDetailViewModel : INotifyPropertyChanged
     private async Task OnBack()
     {
         await Shell.Current.GoToAsync("..");
+    }
+
+    [RelayCommand]
+    private async Task AddManagerAsync()
+    {
+        // Simplesmente pede os dados via Prompt para agilizar o exemplo. 
+        // O ideal seria uma tela de cadastro dedicada.
+        string name = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Nome do Gerente:");
+        string email = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Email de Login:");
+        string pass = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Senha:");
+
+        if (!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(email))
+        {
+            // Chama o método específico do Service
+            await _databaseService.CreateManagerAsync(name, email, pass, Company.Id);
+            await Shell.Current.DisplayAlert("Sucesso", "Gerente criado!", "OK");
+        }
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
