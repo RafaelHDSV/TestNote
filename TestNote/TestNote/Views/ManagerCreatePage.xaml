@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels"
+             xmlns:models="clr-namespace:TestNote.Models"
+             x:Class="TestNote.Views.ManagerCreatePage"
+             x:DataType="vm:ManagerCreateViewModel"
+             Title="Novo Gerente">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Nome Completo: " />
+        <Entry Placeholder="Insira o nome completo" Text="{Binding Name}" />
+
+        <Label Text="Email : " />
+        <Entry Placeholder="Insira o email" Keyboard="Email" Text="{Binding Email}" />
+
+        <Label Text="Senha: " />
+        <Entry Placeholder="Insira a senha" IsPassword="True" Text="{Binding Password}" />
+
+        <Label Text="Vincular a uma Empresa" FontAttributes="Bold" Margin="0,10,0,0"/>
+        <Picker Title="Selecione a Empresa"
+                ItemsSource="{Binding Companies}"
+                SelectedItem="{Binding SelectedCompany}"
+                ItemDisplayBinding="{Binding Name}" 
+                BackgroundColor="#f0f0f0"
+                TextColor="#000"/>
+
+        <Button Text="Salvar Gerente" 
+                Command="{Binding SaveManagerCommand}" 
+                BackgroundColor="#1976D2" 
+                TextColor="White"
+                Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

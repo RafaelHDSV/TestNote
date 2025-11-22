@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestNote.Models;
 using TestNote.Services;
+using TestNote.Views;
 
 namespace TestNote.ViewModels
 {
@@ -44,6 +45,18 @@ namespace TestNote.ViewModels
             }
 
             IsLoading = false;
+        }
+
+        [RelayCommand]
+        private async Task GoToCreateCompany()
+        {
+            await Shell.Current.GoToAsync(nameof(CompanyCreatePage));
+        }
+
+        [RelayCommand]
+        private async Task GoToCreateManager()
+        {
+            await Shell.Current.GoToAsync(nameof(ManagerCreatePage));
         }
     }
 }

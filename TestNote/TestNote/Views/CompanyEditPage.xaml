@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels"
+             x:Class="TestNote.Views.CompanyEditPage"
+             x:DataType="vm:CompanyEditViewModel"
+             Title="Editar Empresa">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Nome da Empresa:" />
+        <Entry Placeholder="Insira o nome da empresa" Text="{Binding Name}" />
+
+        <Label Text="Dono / Responsável: " />
+        <Entry Placeholder="Insira o dono / responsável" Text="{Binding Owner}" />
+
+        <Label Text="Setor de Atuação: " />
+        <Entry Placeholder="Insira o setor de atuação" Text="{Binding Sector}" />
+
+        <Label Text="Nº de Funcionários: " />
+        <Entry Keyboard="Numeric" Text="{Binding NumberOfEmployees}" />
+
+        <Button Text="Salvar Alterações" 
+            Command="{Binding UpdateCompanyCommand}" 
+            BackgroundColor="#007AFF" 
+            TextColor="White"
+            Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

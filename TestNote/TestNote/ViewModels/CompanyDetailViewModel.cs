@@ -38,9 +38,20 @@ public partial class CompanyDetailViewModel : INotifyPropertyChanged
 
     public CompanyDetailViewModel() : this(null!) { }
 
-    private void OnEdit()
+    private async void OnEdit()
     {
-        // Navegar para tela de edição
+        if (Company == null) return;
+
+        // Navega para a tela de edição passando a empresa atual
+        await Shell.Current.GoToAsync(nameof(CompanyEditPage), new Dictionary<string, object>
+        {
+            { "Company", Company }
+        });
+    }
+
+    public void Refresh()
+    {
+        OnPropertyChanged(nameof(Company));
     }
 
     private async void OnOpenTests()

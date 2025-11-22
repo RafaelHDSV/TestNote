@@ -36,12 +36,5 @@
                 HeightRequest="45"
                 Clicked="LoginFunction"
                 />
-
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Label Text="Esqueceu sua senha?"
-                   FontSize="12"
-                   TextColor="#555" />
-        </HorizontalStackLayout>
-
     </VerticalStackLayout>
 </ContentPage>

@@ -8,6 +8,11 @@
     x:DataType="vm:CompaniesViewModel"
     Title="Empresas">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Empresa" Command="{Binding GoToCreateCompanyCommand}" />
+        <ToolbarItem Text="+ Gerente" Command="{Binding GoToCreateManagerCommand}" />
+    </ContentPage.ToolbarItems>
+    
     <Grid Padding="20">
 
         <CollectionView 

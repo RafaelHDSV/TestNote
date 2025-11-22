@@ -24,12 +24,18 @@ namespace TestNote
             builder.Services.AddTransient<CompanyTestsViewModel>();
             builder.Services.AddTransient<CompanyDetailViewModel>();
             builder.Services.AddTransient<EmployeesViewModel>();
+            builder.Services.AddTransient<CompanyCreateViewModel>();
+            builder.Services.AddTransient<ManagerCreateViewModel>();
+            builder.Services.AddTransient<CompanyEditViewModel>();
 
             // 3. VIEWS
             builder.Services.AddTransient<Companies>();
             builder.Services.AddTransient<CompanyTests>();
             builder.Services.AddTransient<CompanyDetails>();
             builder.Services.AddTransient<Employees>();
+            builder.Services.AddTransient<CompanyCreatePage>();
+            builder.Services.AddTransient<ManagerCreatePage>();
+            builder.Services.AddTransient<CompanyEditPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
