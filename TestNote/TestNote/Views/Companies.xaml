@@ -9,6 +9,7 @@
     Title="Empresas">
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Usuários" Command="{Binding GoToUserListCommand}" />
         <ToolbarItem Text="+ Empresa" Command="{Binding GoToCreateCompanyCommand}" />
         <ToolbarItem Text="+ Gerente" Command="{Binding GoToCreateManagerCommand}" />
     </ContentPage.ToolbarItems>

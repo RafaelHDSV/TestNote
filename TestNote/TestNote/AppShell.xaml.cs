@@ -8,6 +8,8 @@ namespace TestNote
         {
             InitializeComponent();
 
+            Routing.RegisterRoute(nameof(Companies), typeof(Companies));
+
             Routing.RegisterRoute(nameof(CompanyDetails), typeof(CompanyDetails));
 
             Routing.RegisterRoute(nameof(Employees), typeof(Employees));
@@ -21,6 +23,12 @@ namespace TestNote
             Routing.RegisterRoute(nameof(ManagerCreatePage), typeof(ManagerCreatePage));
 
             Routing.RegisterRoute(nameof(CompanyEditPage), typeof(CompanyEditPage));
+
+            Routing.RegisterRoute(nameof(EmployeeCreatePage), typeof(EmployeeCreatePage));
+
+            Routing.RegisterRoute(nameof(EmployeeEditPage), typeof(EmployeeEditPage));
+
+            Routing.RegisterRoute(nameof(AdminUsersPage), typeof(AdminUsersPage));
         }
     }
 }

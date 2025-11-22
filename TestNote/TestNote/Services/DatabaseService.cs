@@ -180,5 +180,16 @@ namespace TestNote.Services
             await InitializeAsync();
             return await _database.DeleteAsync(item);
         }
+
+        /// <summary>
+        /// Retorna todos os registros da tabela User.
+        /// </summary>
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            await InitializeAsync();
+
+            // Simplesmente retorna todos os itens da tabela User
+            return await _database!.Table<User>().ToListAsync();
+        }
     }
 }

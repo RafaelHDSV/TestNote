@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestNote.Models;
 using TestNote.Services;
+using TestNote.Views;
 
 namespace TestNote.ViewModels
 {
@@ -22,6 +24,9 @@ namespace TestNote.ViewModels
 
         [ObservableProperty]
         private bool isLoading;
+
+        [ObservableProperty]
+        private Employee? selectedEmployee;
 
         public EmployeesViewModel(DatabaseService databaseService)
         {
@@ -41,6 +46,34 @@ namespace TestNote.ViewModels
             Employees = new ObservableCollection<Employee>(dbEmployees);
 
             IsLoading = false;
+        }
+
+        [RelayCommand]
+        private async Task GoToCreateEmployee()
+        {
+            if (Company == null)
+            {
+                await Shell.Current.DisplayAlert("Erro", "Empresa não definida.", "OK");
+                return;
+            }
+
+            // Navega para a página de criação de funcionário, passando a CompanyId
+            await Shell.Current.GoToAsync($"{nameof(EmployeeCreatePage)}?companyId={Company.Id}");
+        }
+
+        [RelayCommand]
+        private async Task SelectEmployee(Employee employee)
+        {
+            if (employee == null) return;
+
+            // Navega para a página de edição, passando o objeto Employee
+            await Shell.Current.GoToAsync(nameof(EmployeeEditPage), new Dictionary<string, object>
+            {
+                { "Employee", employee }
+            });
+
+            // Limpa a seleção após navegar
+            SelectedEmployee = null;
         }
     }
 }

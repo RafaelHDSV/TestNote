@@ -571,6 +571,11 @@ C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em 
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\MauiInfo.plist
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\MauiSplash.storyboard
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449.png
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.stamp
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
@@ -589,7 +594,10 @@ C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em 
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.stamp
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.stamp
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
+C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\actool\_PartialAppManifest.items
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\actool\_BundleResourceWithLogicalName.items
 C:\Users\rafae\OneDrive\Documentos\FACULDADE\Desenvolvimento de Aplicações em Ambientes Móveis\TestNote\TestNote\TestNote\obj\Debug\net9.0-ios\iossimulator-x64\actool\_ProcessedImageAssetsPath.items

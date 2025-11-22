@@ -19,7 +19,7 @@ namespace TestNote
                 });
             builder.Services.AddSingleton<DatabaseService>();
 
-            // 2. VIEW MODELS
+            // VIEW MODELS
             builder.Services.AddTransient<CompaniesViewModel>();
             builder.Services.AddTransient<CompanyTestsViewModel>();
             builder.Services.AddTransient<CompanyDetailViewModel>();
@@ -27,8 +27,11 @@ namespace TestNote
             builder.Services.AddTransient<CompanyCreateViewModel>();
             builder.Services.AddTransient<ManagerCreateViewModel>();
             builder.Services.AddTransient<CompanyEditViewModel>();
+            builder.Services.AddTransient<EmployeeCreateViewModel>();
+            builder.Services.AddTransient<EmployeeEditViewModel>();
+            builder.Services.AddTransient<AdminUsersViewModel>();
 
-            // 3. VIEWS
+            // VIEWS
             builder.Services.AddTransient<Companies>();
             builder.Services.AddTransient<CompanyTests>();
             builder.Services.AddTransient<CompanyDetails>();
@@ -36,6 +39,9 @@ namespace TestNote
             builder.Services.AddTransient<CompanyCreatePage>();
             builder.Services.AddTransient<ManagerCreatePage>();
             builder.Services.AddTransient<CompanyEditPage>();
+            builder.Services.AddTransient<EmployeeCreatePage>();
+            builder.Services.AddTransient<EmployeeEditPage>();
+            builder.Services.AddTransient<AdminUsersPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

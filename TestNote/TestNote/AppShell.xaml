@@ -11,15 +11,4 @@
         Title="Login"
         ContentTemplate="{DataTemplate local:Login}"
         Route="Login" />
-
-    <ShellContent
-        Title="Empresas"
-        ContentTemplate="{DataTemplate local:Companies}"
-        Route="Companies" />
-
-    <ShellContent
-        Title="Detalhes de Empresa"
-        ContentTemplate="{DataTemplate views:CompanyDetails}"
-        Route="CompanyDetails" />
-
 </Shell>

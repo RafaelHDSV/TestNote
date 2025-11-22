@@ -28,4 +28,14 @@ public partial class Employees : ContentPage
             }
         }
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is EmployeesViewModel vm && vm.Company != null)
+        {
+            // Força o recarregamento dos funcionários sempre que a página aparece (útil após criação ou edição)
+            _ = vm.LoadEmployeesAsync(vm.Company.Id);
+        }
+    }
 }

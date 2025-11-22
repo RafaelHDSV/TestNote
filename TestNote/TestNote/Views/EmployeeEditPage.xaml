@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels"
+             x:Class="TestNote.Views.EmployeeEditPage"
+             x:DataType="vm:EmployeeEditViewModel"
+             Title="Editar Funcionário">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Editar Dados do Funcionário" FontSize="18" FontAttributes="Bold" TextColor="#007AFF"/>
+
+        <Entry Placeholder="Nome Completo" Text="{Binding Name}" />
+        <Entry Placeholder="Cargo / Função" Text="{Binding JobTitle}" />
+        <Entry Placeholder="Email de Login" Keyboard="Email" Text="{Binding Email}" />
+
+        <Label Text="Deixe em branco para manter a senha atual." FontSize="10" TextColor="Gray" Margin="0,-5,0,0"/>
+        <Entry Placeholder="Nova Senha (Opcional)" IsPassword="True" Text="{Binding Password}" />
+
+        <Button Text="Salvar Alterações" 
+                Command="{Binding UpdateEmployeeCommand}" 
+                BackgroundColor="#007AFF" 
+                TextColor="White"
+                Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

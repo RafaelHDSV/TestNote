@@ -48,6 +48,12 @@ namespace TestNote.ViewModels
         }
 
         [RelayCommand]
+        private async Task GoToUserList()
+        {
+            await Shell.Current.GoToAsync(nameof(AdminUsersPage));
+        }
+
+        [RelayCommand]
         private async Task GoToCreateCompany()
         {
             await Shell.Current.GoToAsync(nameof(CompanyCreatePage));

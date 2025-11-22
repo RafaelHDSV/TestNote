@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestNote")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8e7554b1bcb0c9091597efb9e750b0b530cec49a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d91b22758b29f4f7e7972ba51307c623bcabf552")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestNote")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestNote")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,8 +5,14 @@
              xmlns:models="clr-namespace:TestNote.Models"
              x:DataType="vm:EmployeesViewModel"
              x:Class="TestNote.Views.Employees"
-             Title="Employees">
+             Title="Funcionários">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Novo Funcionário" 
+                     Command="{Binding GoToCreateEmployeeCommand}" 
+                     IconImageSource="adicionar_funcionario.png" />
+    </ContentPage.ToolbarItems>
+    
     <Grid RowDefinitions="Auto, *">
 
         <ActivityIndicator Grid.Row="0" 
@@ -25,30 +31,52 @@
                    Margin="0,0,0,15"
                    IsVisible="{Binding Company, Converter={StaticResource NullToBoolConverter}}"/>
             <CollectionView
+                Grid.Row="1"
                 ItemsSource="{Binding Employees}"
-                SelectionMode="Single">
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedEmployee}">
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Employee">
                         <Border Margin="0,5" Padding="15"
-                                StrokeShape="RoundRectangle 8"
-                                BackgroundColor="White"
-                                HorizontalOptions="Fill">
+                            StrokeShape="RoundRectangle 8"
+                            BackgroundColor="White"
+                            HorizontalOptions="Fill">
+
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EmployeesViewModel}}, Path=SelectEmployeeCommand}"
+                                CommandParameter="{Binding .}" />
+                            </Border.GestureRecognizers>
+
                             <VerticalStackLayout Spacing="4">
+                                <Label Text="{Binding Id}"
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding Name}"
+                                       TextColor="#000"
+                                    />
+                                <Label Text="{Binding JobTitle}"
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding UserId}"
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding CompanyId}"
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding Email}"
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding AccessLevel}"
+                                        TextColor="#000"
+                                    />
                                 <Label Text="{Binding DisplayName}"
-                                       FontSize="16"
-                                       FontAttributes="Bold"
-                                       TextColor="#222" />
-                                <HorizontalStackLayout Spacing="5">
-                                    <Label Text="Email:" FontAttributes="Bold" TextColor="#555" FontSize="12"/>
-                                    <Label Text="{Binding Email}" TextColor="#555" FontSize="12"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Spacing="5">
-                                    <Label Text="Nível de Acesso:" FontAttributes="Bold" TextColor="#555" FontSize="12"/>
-                                    <Label Text="{Binding RoleName}" 
-                                           TextColor="{Binding AccessLevel, Converter={StaticResource AccessLevelColorConverter}}" 
-                                           FontSize="12"/>
-                                </HorizontalStackLayout>
+                                        TextColor="#000"
+                                    />
+                                <Label Text="{Binding RoleName}"
+                                        TextColor="#000"
+                                    />
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>

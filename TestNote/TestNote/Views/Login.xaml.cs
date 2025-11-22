@@ -26,14 +26,14 @@ public partial class Login : ContentPage
 
         if (user == null)
         {
-            await DisplayAlert("Erro", "Falha no login", "OK");
+            await DisplayAlert("Erro", "Informações de login incorretos", "OK");
             return;
         }
 
         if (user.Role == 1) // Admin
         {
             // Admin vê todas as empresas
-            await Shell.Current.GoToAsync($"//{nameof(Companies)}");
+            await Shell.Current.GoToAsync($"{nameof(Companies)}");
         }
         else if (user.Role == 2) // Manager
         {

@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\companydetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\companydetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\viewmodels\\companydetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\viewmodels\\companydetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\companyeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\companyeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\companyeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\companyeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\viewmodels\\companyeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\viewmodels\\companyeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\companydetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\companydetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\manageemployeespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\manageemployeespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\adminuserspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\adminuserspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\views\\adminuserspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\views\\adminuserspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|c:\\users\\rafae\\onedrive\\documentos\\faculdade\\desenvolvimento de aplica\u00E7\u00F5es em ambientes m\u00F3veis\\testnote\\testnote\\testnote\\viewmodels\\adminusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BA33A10-5860-4313-B3BD-282F637303F6}|TestNote\\TestNote.csproj|solutionrelative:testnote\\viewmodels\\adminusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,14 +55,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CompanyDetails.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyDetails.xaml.cs",
-              "RelativeDocumentMoniker": "TestNote\\Views\\CompanyDetails.xaml.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyDetails.xaml.cs",
-              "RelativeToolTip": "TestNote\\Views\\CompanyDetails.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCUAAAAZAAAAAAAAAA==",
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "TestNote\\Views\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\Login.xaml.cs",
+              "RelativeToolTip": "TestNote\\Views\\Login.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAtwBwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:10:38.947Z",
+              "WhenOpened": "2025-11-22T16:31:34.402Z",
               "EditorCaption": ""
             },
             {
@@ -68,92 +76,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CompanyDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\CompanyDetailViewModel.cs",
-              "RelativeDocumentMoniker": "TestNote\\ViewModels\\CompanyDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\CompanyDetailViewModel.cs",
-              "RelativeToolTip": "TestNote\\ViewModels\\CompanyDetailViewModel.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswDYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:17:26.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "TestNote\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml.cs",
-              "RelativeToolTip": "TestNote\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:17:00.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\MauiProgram.cs",
               "RelativeDocumentMoniker": "TestNote\\MauiProgram.cs",
               "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\MauiProgram.cs",
               "RelativeToolTip": "TestNote\\MauiProgram.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCUAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:16:03.777Z",
+              "WhenOpened": "2025-11-22T16:29:31.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CompanyEditPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyEditPage.xaml.cs",
-              "RelativeDocumentMoniker": "TestNote\\Views\\CompanyEditPage.xaml.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyEditPage.xaml.cs",
-              "RelativeToolTip": "TestNote\\Views\\CompanyEditPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "TestNote\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml.cs",
+              "RelativeToolTip": "TestNote\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:15:39.147Z",
+              "WhenOpened": "2025-11-22T16:28:26.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml",
+              "RelativeDocumentMoniker": "TestNote\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\AppShell.xaml",
+              "RelativeToolTip": "TestNote\\AppShell.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-22T16:28:20.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CompanyEditPage.xaml",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyEditPage.xaml",
-              "RelativeDocumentMoniker": "TestNote\\Views\\CompanyEditPage.xaml",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyEditPage.xaml",
-              "RelativeToolTip": "TestNote\\Views\\CompanyEditPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "TestNote\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Models\\Employee.cs",
+              "RelativeToolTip": "TestNote\\Models\\Employee.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA5wCIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:19:54.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employees.xaml",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\Employees.xaml",
+              "RelativeDocumentMoniker": "TestNote\\Views\\Employees.xaml",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\Employees.xaml",
+              "RelativeToolTip": "TestNote\\Views\\Employees.xaml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwEYAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-22T14:15:05.777Z",
+              "WhenOpened": "2025-11-22T16:17:20.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CompanyEditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\CompanyEditViewModel.cs",
-              "RelativeDocumentMoniker": "TestNote\\ViewModels\\CompanyEditViewModel.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\CompanyEditViewModel.cs",
-              "RelativeToolTip": "TestNote\\ViewModels\\CompanyEditViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAkAAAAAAAAAA==",
+              "Title": "ManageEmployeesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\ManageEmployeesPage.xaml",
+              "RelativeDocumentMoniker": "TestNote\\Views\\ManageEmployeesPage.xaml",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\ManageEmployeesPage.xaml",
+              "RelativeToolTip": "TestNote\\Views\\ManageEmployeesPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-22T16:17:15.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminUsersPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\AdminUsersPage.xaml.cs",
+              "RelativeDocumentMoniker": "TestNote\\Views\\AdminUsersPage.xaml.cs",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\AdminUsersPage.xaml.cs",
+              "RelativeToolTip": "TestNote\\Views\\AdminUsersPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:14:04.269Z",
+              "WhenOpened": "2025-11-22T16:10:06.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CompanyDetails.xaml",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyDetails.xaml",
-              "RelativeDocumentMoniker": "TestNote\\Views\\CompanyDetails.xaml",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\CompanyDetails.xaml",
-              "RelativeToolTip": "TestNote\\Views\\CompanyDetails.xaml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAcwD4AAAAAAAAAAAAAAA==",
+              "Title": "AdminUsersPage.xaml",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\AdminUsersPage.xaml",
+              "RelativeDocumentMoniker": "TestNote\\Views\\AdminUsersPage.xaml",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\Views\\AdminUsersPage.xaml",
+              "RelativeToolTip": "TestNote\\Views\\AdminUsersPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBgAAAChAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-22T14:10:25.072Z",
+              "WhenOpened": "2025-11-22T16:10:05.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminUsersViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\AdminUsersViewModel.cs",
+              "RelativeDocumentMoniker": "TestNote\\ViewModels\\AdminUsersViewModel.cs",
+              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\FACULDADE\\Desenvolvimento de Aplica\u00E7\u00F5es em Ambientes M\u00F3veis\\TestNote\\TestNote\\TestNote\\ViewModels\\AdminUsersViewModel.cs",
+              "RelativeToolTip": "TestNote\\ViewModels\\AdminUsersViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:09:56.096Z",
               "EditorCaption": ""
             }
           ]

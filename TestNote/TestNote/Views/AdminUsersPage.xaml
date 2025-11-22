@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels"
+             xmlns:models="clr-namespace:TestNote.Models"
+             x:Class="TestNote.Views.AdminUsersPage"
+             x:DataType="vm:AdminUsersViewModel"
+             Title="Todos os Usuários">
+
+    <VerticalStackLayout Padding="20">
+        <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Color="#1976D2" />
+
+        <Label Text="Todos os Usuários (Tabela User)" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+
+        <CollectionView ItemsSource="{Binding AllUsers}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:User">
+                    <Border Margin="0,5" Padding="15" StrokeShape="RoundRectangle 8" BackgroundColor="White">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontSize="12" TextColor="#000"/>
+                            <Label Text="{Binding Email}" FontSize="16" FontAttributes="Bold" TextColor="#000"/>
+
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="Nível de Acesso:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
+                                <Label Text="{Binding Role, Converter={StaticResource RoleToNameConverter}}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
