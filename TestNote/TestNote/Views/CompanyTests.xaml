@@ -62,14 +62,17 @@
                                            FontSize="13"/>
                                 </HorizontalStackLayout>
 
-                                <Label Text="Itens do Teste:" FontAttributes="Bold" Margin="0,5,0,0" FontSize="14"/>
-                                <StackLayout BindableLayout.ItemsSource="{Binding TestItems}" Margin="10,0,0,0">
+                                <Label Text="Itens do Teste:" FontAttributes="Bold" FontSize="13" TextColor="#555"/>
+                                <VerticalStackLayout BindableLayout.ItemsSource="{Binding TestItems}" Spacing="4" Margin="10,0,0,0">
                                     <BindableLayout.ItemTemplate>
-                                        <DataTemplate>
-                                            <Label Text="{Binding .}" FontSize="13" TextColor="#444"/>
+                                        <DataTemplate x:DataType="x:String">
+                                            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="5">
+                                                <Label Grid.Column="0" Text="•" TextColor="#444" LineBreakMode="WordWrap"/>
+                                                <Label Grid.Column="1" Text="{Binding .}" FontSize="13" TextColor="#444" LineBreakMode="WordWrap"/>
+                                            </Grid>
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>
-                                </StackLayout>
+                                </VerticalStackLayout>
 
                             </VerticalStackLayout>
                         </Border>

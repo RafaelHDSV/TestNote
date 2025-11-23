@@ -13,6 +13,7 @@
 
             <converters:RoleToNameConverter x:Key="RoleToNameConverter" />
             <converters:TestStatusColorConverter x:Key="TestStatusColorConverter" />
+            <converters:BoolToStrikeThroughConverter x:Key="BoolToStrikeThroughConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

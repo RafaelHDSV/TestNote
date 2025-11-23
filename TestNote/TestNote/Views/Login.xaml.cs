@@ -62,7 +62,32 @@ public partial class Login : ContentPage
         else if (user.Role == 3) // Employee
         {
             var empProfile = await _databaseService.GetEmployeeByUserIdAsync(user.Id);
-            await Shell.Current.DisplayAlert("Ola", $"Funcionario: {empProfile?.Name}", "OK");
+
+            if (empProfile != null)
+            {
+                // 1. O funcionário precisa da Empresa à qual está vinculado
+                var company = await _databaseService.GetItemAsync<Company>(empProfile.CompanyId);
+
+                if (company != null)
+                {
+                    // 2. Redireciona para a tela de Testes da Empresa
+                    // O CompanyTests usa o QueryProperty "Company"
+                    await Shell.Current.GoToAsync(nameof(CompanyTests), new Dictionary<string, object>
+                      {
+                        { "Company", company }
+                      });
+                }
+                else
+                {
+                    // Se o perfil do funcionário existe, mas a empresa não
+                    await DisplayAlert("Erro de Acesso", "Empresa vinculada não encontrada para seu perfil.", "OK");
+                }
+            }
+            else
+            {
+                // Se o perfil do funcionário não existe
+                await DisplayAlert("Erro de Acesso", "Perfil de funcionário não encontrado.", "OK");
+            }
         }
     }
 }

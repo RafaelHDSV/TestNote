@@ -32,8 +32,39 @@ namespace TestNote.Models
         [Ignore]
         public List<string> TestItems
         {
-            get => string.IsNullOrEmpty(TestItemsString) ? new List<string>() : TestItemsString.Split('|').ToList();
+            get
+            {
+                if (string.IsNullOrEmpty(TestItemsString))
+                    return new List<string>(); // Retorna lista vazia se nulo
+
+                return TestItemsString.Split('|', StringSplitOptions.RemoveEmptyEntries).ToList();
+            }
             set => TestItemsString = string.Join("|", value);
+        }
+
+        public int CompletedItemCount { get; set; }
+        public string CompletedItemsString { get; set; } = string.Empty;
+        public string ExecutionNotes { get; set; } = string.Empty;
+        [Ignore]
+        public int CompletionPercentage
+        {
+            get
+            {
+                var totalItems = TestItems.Count;
+                if (totalItems == 0) return 0;
+                return (int)(((double)CompletedItemCount / totalItems) * 100);
+            }
+        }
+
+        [Ignore]
+        public Color ProgressColor
+        {
+            get
+            {
+                if (Status == "Concluído" || CompletionPercentage == 100) return Color.FromArgb("#34C759"); // Verde
+                if (Status == "Em Andamento") return Color.FromArgb("#FF9500"); // Laranja
+                return Color.FromArgb("#555555"); // Cinza (Pendente)
+            }
         }
     }
 }
