@@ -10,14 +10,27 @@
         <VerticalStackLayout Padding="20" Spacing="20">
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="{Binding Test.Title}" FontSize="24" FontAttributes="Bold" TextColor="#333"/>
-                <Label Text="{Binding Test.Description}" TextColor="Gray" FontSize="14" LineBreakMode="WordWrap"/>
+                <Label Text="{Binding Test.Title}" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="{Binding Test.Description}" TextColor="Gray" FontSize="14" LineBreakMode="WordWrap" Padding="16, 0, 0, 0"/>
 
-                <Label Text="{Binding CompletedCount, StringFormat='Progresso: {0} / {1} itens'}" 
-                       TextColor="{Binding Test.ProgressColor}" 
-                       FontAttributes="Bold" 
+                <Label FontAttributes="Bold"
                        FontSize="14"
-                       HorizontalOptions="Start"/>
+                       HorizontalOptions="Start">
+
+                    <Label.Text>
+                        <MultiBinding StringFormat="Progresso: {0} / {1} itens">
+
+                            <Binding Path="CompletedCount" />
+
+                            <Binding Path="TotalCount" />
+
+                        </MultiBinding>
+                    </Label.Text>
+
+                    <Label.TextColor>
+                        <Binding Path="ProgressColor" />
+                    </Label.TextColor>
+                </Label>
 
                 <ProgressBar Progress="{Binding CompletionProgress}" 
                              ProgressColor="{Binding Test.ProgressColor}"
@@ -54,7 +67,7 @@
             </VerticalStackLayout>
 
 
-            <Button Text="Salvar Progresso / Finalizar Teste" 
+            <Button Text="Salvar Progresso" 
                     Command="{Binding CompleteTestCommand}" 
                     BackgroundColor="{Binding Test.ProgressColor}" 
                     TextColor="White"

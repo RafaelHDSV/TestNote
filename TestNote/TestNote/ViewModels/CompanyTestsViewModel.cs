@@ -55,5 +55,18 @@ namespace TestNote.ViewModels
             // await Shell.Current.GoToAsync($"{nameof(TestEditPage)}?testId={test.Id}");
             await Shell.Current.DisplayAlert("Teste Selecionado", test.Title, "OK");
         }
+
+        [RelayCommand]
+        private async Task GoToExecuteTest(Test test)
+        {
+            if (test == null)
+                return;
+
+            // Navega para a página de execução, passando o objeto Test selecionado
+            await Shell.Current.GoToAsync(nameof(TestExecutionPage), new Dictionary<string, object>
+            {
+                { "Test", test }
+            });
+        }
     }
 }

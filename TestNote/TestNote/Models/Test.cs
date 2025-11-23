@@ -66,5 +66,11 @@ namespace TestNote.Models
                 return Color.FromArgb("#555555"); // Cinza (Pendente)
             }
         }
+
+        [Ignore]
+        public int TotalCount
+        {
+            get => TestItems.Count;
+        }
     }
 }
