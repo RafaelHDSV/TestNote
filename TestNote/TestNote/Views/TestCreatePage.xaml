@@ -28,7 +28,7 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="5" ColumnDefinitions="*, Auto">
-                                <Label Text="{Binding .}" VerticalOptions="Center"/>
+                                <Label Text="{Binding .}" VerticalOptions="Center" TextColor="White"/>
                                 <Button Grid.Column="1" Text="X" 
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TestCreateViewModel}}, Path=RemoveItemCommand}"
                                     CommandParameter="{Binding .}"
