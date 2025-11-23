@@ -29,7 +29,7 @@ namespace TestNote.Models
         public int AccessLevel { get; set; } = 3; // Padrão funcionário
 
         [Ignore]
-        public string DisplayName => $"{Name} - {JobTitle}";
+        public string DisplayName => $"{Id} - {Name}";
 
         [Ignore]
         public string RoleName => "Funcionário";

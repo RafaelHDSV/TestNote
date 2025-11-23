@@ -7,12 +7,25 @@
              Title="Novo Funcionário">
 
     <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Cadastrar Novo Funcionário" FontSize="18" FontAttributes="Bold" TextColor="#1976D2"/>
+        <VerticalStackLayout Spacing="8">
+            <Label Text="Nome Completo:"/>
+            <Entry Placeholder="Insira o nome completo" Text="{Binding Name}" />
+        </VerticalStackLayout>
 
-        <Entry Placeholder="Nome Completo" Text="{Binding Name}" />
-        <Entry Placeholder="Cargo / Função" Text="{Binding JobTitle}" />
-        <Entry Placeholder="Email de Login" Keyboard="Email" Text="{Binding Email}" />
-        <Entry Placeholder="Senha" IsPassword="True" Text="{Binding Password}" />
+        <VerticalStackLayout Spacing="8">
+            <Label Text="Cargo / Função: "/>
+            <Entry Placeholder="Insira o cargo / função" Text="{Binding JobTitle}" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Spacing="8">
+            <Label Text="Email:"/>
+            <Entry Placeholder="Insira o email" Keyboard="Email" Text="{Binding Email}" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Spacing="8">
+            <Label Text="Senha:"/>
+            <Entry Placeholder="Insira a senha" IsPassword="True" Text="{Binding Password}" />
+        </VerticalStackLayout>
 
         <Button Text="Salvar Funcionário" 
                 Command="{Binding SaveEmployeeCommand}" 

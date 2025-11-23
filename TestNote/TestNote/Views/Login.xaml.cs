@@ -19,7 +19,6 @@ public partial class Login : ContentPage
         }
     }
 
-    // ...
     async void LoginFunction(object sender, EventArgs e)
     {
         var user = await _databaseService.LoginAsync(EmailEntry.Text, PasswordEntry.Text);
@@ -37,22 +36,33 @@ public partial class Login : ContentPage
         }
         else if (user.Role == 2) // Manager
         {
-            // Precisamos saber QUAL empresa esse gerente cuida
             var managerProfile = await _databaseService.GetManagerByUserIdAsync(user.Id);
 
             if (managerProfile != null)
             {
-                // Vai para uma tela de gestão de funcionários da empresa dele
-                // Vamos criar essa tela: ManageEmployeesPage
-                await Shell.Current.GoToAsync($"{nameof(ManageEmployeesPage)}?companyId={managerProfile.CompanyId}");
+                var company = await _databaseService.GetItemAsync<Company>(managerProfile.CompanyId);
+
+                if (company != null)
+                {
+                    await Shell.Current.GoToAsync(nameof(CompanyDetails), new Dictionary<string, object>
+            {
+                { "Company", company }
+            });
+                }
+                else
+                {
+                    await DisplayAlert("Erro", "Empresa vinculada não encontrada.", "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Erro", "Perfil de gerente não encontrado.", "OK");
             }
         }
         else if (user.Role == 3) // Employee
         {
-            // Employee vê seus testes
             var empProfile = await _databaseService.GetEmployeeByUserIdAsync(user.Id);
             await Shell.Current.DisplayAlert("Ola", $"Funcionario: {empProfile?.Name}", "OK");
-            // await Shell.Current.GoToAsync($"{nameof(EmployeeTests)}?employeeId={empProfile.Id}");
         }
     }
 }

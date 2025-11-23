@@ -5,12 +5,11 @@
              xmlns:models="clr-namespace:TestNote.Models"
              x:DataType="vm:EmployeesViewModel"
              x:Class="TestNote.Views.Employees"
-             Title="Funcionários">
+             Title="{Binding Company.Name, StringFormat='Funcionários ({0})'}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+ Novo Funcionário" 
-                     Command="{Binding GoToCreateEmployeeCommand}" 
-                     IconImageSource="adicionar_funcionario.png" />
+        <ToolbarItem Text="Adicionar Funcionário" 
+                     Command="{Binding GoToCreateEmployeeCommand}" />
     </ContentPage.ToolbarItems>
     
     <Grid RowDefinitions="Auto, *">
@@ -24,17 +23,26 @@
                            Margin="10"/>
 
         <VerticalStackLayout Grid.Row="1" Padding="20">
-
-            <Label Text="{Binding Company.Name, StringFormat='Lista de Funcionários ({0})'}" 
-                   FontSize="22" 
-                   FontAttributes="Bold" 
-                   Margin="0,0,0,15"
-                   IsVisible="{Binding Company, Converter={StaticResource NullToBoolConverter}}"/>
             <CollectionView
                 Grid.Row="1"
                 ItemsSource="{Binding Employees}"
                 SelectionMode="Single"
                 SelectedItem="{Binding SelectedEmployee}">
+
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                        <Label Text="📭" FontSize="40" HorizontalOptions="Center"/>
+                        <Label Text="Nenhum funcionário encontrado."
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="Gray"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Clique no botão 'Adicionar Funcionário' acima para adicionar."
+                               FontSize="12"
+                               TextColor="Gray"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Employee">
@@ -50,46 +58,48 @@
                             </Border.GestureRecognizers>
 
                             <VerticalStackLayout Spacing="4">
-                                <Label Text="{Binding Id}"
-                                        TextColor="#000"
-                                    />
-                                <Label Text="{Binding Name}"
-                                       TextColor="#000"
-                                    />
-                                <Label Text="{Binding JobTitle}"
-                                        TextColor="#000"
-                                    />
-                                <Label Text="{Binding UserId}"
-                                        TextColor="#000"
-                                    />
-                                <Label Text="{Binding CompanyId}"
-                                        TextColor="#000"
-                                    />
-                                <Label Text="{Binding Email}"
-                                        TextColor="#000"
-                                    />
-                                <Label Text="{Binding AccessLevel}"
-                                        TextColor="#000"
-                                    />
                                 <Label Text="{Binding DisplayName}"
-                                        TextColor="#000"
+                                       TextColor="#000"
+                                       FontSize="18"
                                     />
-                                <Label Text="{Binding RoleName}"
-                                        TextColor="#000"
-                                    />
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Email:"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding Email}"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        LineBreakMode="TailTruncation" />
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Cargo:"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding JobTitle}"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        LineBreakMode="TailTruncation" />
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Tipo:"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        FontAttributes="Bold"
+                                        LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding RoleName}"
+                                        FontSize="13"
+                                        TextColor="#444"
+                                        LineBreakMode="TailTruncation" />
+                                </HorizontalStackLayout>
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-            <Label Text="Nenhum funcionário encontrado para esta empresa."
-                   IsVisible="{Binding Employees.Count, Converter={StaticResource EmptyCollectionToBoolConverter}}"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   Margin="0,50,0,0"
-                   TextColor="#777"/>
-
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

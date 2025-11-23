@@ -10,8 +10,8 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Usuários" Command="{Binding GoToUserListCommand}" />
-        <ToolbarItem Text="+ Empresa" Command="{Binding GoToCreateCompanyCommand}" />
-        <ToolbarItem Text="+ Gerente" Command="{Binding GoToCreateManagerCommand}" />
+        <ToolbarItem Text="Adicionar Empresa" Command="{Binding GoToCreateCompanyCommand}" />
+        <ToolbarItem Text="Adicionar Gerente" Command="{Binding GoToCreateManagerCommand}" />
     </ContentPage.ToolbarItems>
     
     <Grid Padding="20">
@@ -69,7 +69,7 @@
                                         TextColor="#444"
                                         FontAttributes="Bold"
                                         LineBreakMode="TailTruncation" />
-                                <Label Text="{Binding NumberOfEmployees}"
+                                <Label Text="{Binding NumberOfEmployees, StringFormat='{0:N0}'}"
                                        FontSize="13"
                                        TextColor="#444"
                                        LineBreakMode="TailTruncation" />

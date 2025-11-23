@@ -12,17 +12,21 @@
 
             <Border StrokeThickness="0.2" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="20">
                 <VerticalStackLayout Spacing="12">
-                    <Label Text="{Binding Company.Name}" FontSize="24" FontAttributes="Bold" TextColor="#333"/>
-                    <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto">
+                    <Label Text="{Binding Company.DisplayName}" FontSize="24" FontAttributes="Bold" TextColor="#333"/>
+                    <HorizontalStackLayout Spacing="6">
                         <Label Grid.Row="0" Grid.Column="0" Text="Dono:" FontAttributes="Bold" TextColor="#555"/>
                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Company.Owner}" TextColor="#555"/>
+                    </HorizontalStackLayout>
 
+                    <HorizontalStackLayout Spacing="6">
                         <Label Grid.Row="1" Grid.Column="0" Text="Setor:" FontAttributes="Bold" TextColor="#555"/>
                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Company.Sector}" TextColor="#555"/>
+                    </HorizontalStackLayout>
 
+                    <HorizontalStackLayout Spacing="6">
                         <Label Grid.Row="2" Grid.Column="0" Text="Funcionários:" FontAttributes="Bold" TextColor="#555"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Company.NumberOfEmployees}" TextColor="#555"/>
-                    </Grid>
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Company.NumberOfEmployees, StringFormat='{0:N0}'}" TextColor="#555"/>
+                    </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Border>
 
