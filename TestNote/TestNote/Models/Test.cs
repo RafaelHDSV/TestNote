@@ -14,16 +14,26 @@ namespace TestNote.Models
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public string Status { get; set; } = "Pendente"; // Ex: Pendente, Em Andamento, Concluído
-        [Indexed]
+        
+        // Status: "Pendente", "Em Andamento", "Concluído", "Aprovado", "Reprovado"
+        public string Status { get; set; } = "Pendente";
+        [Indexed(Name = "Idx_Test_CompanyId", Unique = false)]
         public int CompanyId { get; set; }
 
+        public int CreatorId { get; set; }
+
+        public int? ExecutorId { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? TestedAt { get; set; }
+
+        public string TestItemsString { get; set; } = string.Empty;
+
         [Ignore]
-        public List<string> TestItems => new List<string>
+        public List<string> TestItems
         {
-            "1. Validar Fluxo de Login",
-            "2. Testar Funcionalidade X",
-            "3. Verificar Relatórios Y"
-        };
+            get => string.IsNullOrEmpty(TestItemsString) ? new List<string>() : TestItemsString.Split('|').ToList();
+            set => TestItemsString = string.Join("|", value);
+        }
     }
 }

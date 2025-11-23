@@ -191,5 +191,29 @@ namespace TestNote.Services
             // Simplesmente retorna todos os itens da tabela User
             return await _database!.Table<User>().ToListAsync();
         }
+
+        public async Task<List<Test>> GetTestsByCompanyAsync(int companyId)
+        {
+            await InitializeAsync();
+            return await _database.Table<Test>()
+                                  .Where(t => t.CompanyId == companyId)
+                                  .OrderByDescending(t => t.CreatedAt)
+                                  .ToListAsync();
+        }
+
+        public async Task<List<Test>> GetTestsByExecutorAsync(int executorId)
+        {
+            await InitializeAsync();
+            return await _database.Table<Test>()
+                                  .Where(t => t.ExecutorId == executorId)
+                                  .ToListAsync();
+        }
+
+        // Método auxiliar para criar um teste (Gerente)
+        public async Task CreateTestAsync(Test test)
+        {
+            await InitializeAsync();
+            await SaveItemAsync(test);
+        }
     }
 }

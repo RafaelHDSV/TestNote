@@ -7,6 +7,13 @@ namespace TestNote.Views;
 public partial class CompanyTests : ContentPage
 {
     private Company? _company;
+
+    public CompanyTests(CompanyTestsViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel; // Define o BindingContext aqui
+    }
+
     public Company? Company
     {
         get => _company;
@@ -14,18 +21,20 @@ public partial class CompanyTests : ContentPage
         {
             _company = value;
 
-            var vm = new CompanyTestsViewModel { Company = _company };
-            BindingContext = vm;
-
-            if (_company != null)
+            // ⚠️ CORREÇÃO: Usa o ViewModel já existente no BindingContext
+            if (BindingContext is CompanyTestsViewModel vm && _company != null)
             {
-               _ = vm.LoadTestsAsync(_company.Id);
+                vm.Company = _company; // Atualiza a propriedade no VM
             }
         }
     }
 
-    public CompanyTests()
+    protected override async void OnAppearing()
     {
-        InitializeComponent();
+        base.OnAppearing();
+        if (BindingContext is CompanyTestsViewModel vm && vm.Company != null)
+        {
+            await vm.LoadTestsAsync(vm.Company.Id);
+        }
     }
 }

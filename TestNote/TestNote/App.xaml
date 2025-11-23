@@ -12,6 +12,7 @@
             </ResourceDictionary.MergedDictionaries>
 
             <converters:RoleToNameConverter x:Key="RoleToNameConverter" />
+            <converters:TestStatusColorConverter x:Key="TestStatusColorConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

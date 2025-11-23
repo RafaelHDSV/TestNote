@@ -16,8 +16,6 @@ namespace TestNote
 
             Routing.RegisterRoute(nameof(CompanyTests), typeof(CompanyTests));
 
-            Routing.RegisterRoute(nameof(ManageEmployeesPage), typeof(ManageEmployeesPage));
-
             Routing.RegisterRoute(nameof(CompanyCreatePage), typeof(CompanyCreatePage));
 
             Routing.RegisterRoute(nameof(ManagerCreatePage), typeof(ManagerCreatePage));
@@ -29,6 +27,10 @@ namespace TestNote
             Routing.RegisterRoute(nameof(EmployeeEditPage), typeof(EmployeeEditPage));
 
             Routing.RegisterRoute(nameof(AdminUsersPage), typeof(AdminUsersPage));
+
+            Routing.RegisterRoute(nameof(TestCreatePage), typeof(TestCreatePage));
+
+            Routing.RegisterRoute(nameof(TestExecutionPage), typeof(TestExecutionPage));
         }
     }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TestNote.ViewModels"
+             x:Class="TestNote.Views.TestExecutionPage"
+             x:DataType="vm:TestExecutionViewModel"
+             Title="Executar Teste">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="{Binding Test.Title}" FontSize="22" FontAttributes="Bold" TextColor="#333"/>
+            <Label Text="{Binding Test.Description}" TextColor="Gray" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Checklist de Execução:" FontAttributes="Bold" FontSize="16"/>
+
+            <StackLayout BindableLayout.ItemsSource="{Binding CheckItems}" Spacing="10">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Spacing="10" Padding="5">
+                            <CheckBox IsChecked="{Binding IsChecked}" Color="#34C759"/>
+                            <Label Text="{Binding Description}" VerticalOptions="Center" FontSize="16"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+            <Button Text="Finalizar Teste" 
+                    Command="{Binding CompleteTestCommand}" 
+                    BackgroundColor="#34C759" 
+                    TextColor="White"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

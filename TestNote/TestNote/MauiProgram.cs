@@ -30,6 +30,8 @@ namespace TestNote
             builder.Services.AddTransient<EmployeeCreateViewModel>();
             builder.Services.AddTransient<EmployeeEditViewModel>();
             builder.Services.AddTransient<AdminUsersViewModel>();
+            builder.Services.AddTransient<TestCreateViewModel>();
+            builder.Services.AddTransient<TestExecutionViewModel>();
 
             // VIEWS
             builder.Services.AddTransient<Companies>();
@@ -42,6 +44,8 @@ namespace TestNote
             builder.Services.AddTransient<EmployeeCreatePage>();
             builder.Services.AddTransient<EmployeeEditPage>();
             builder.Services.AddTransient<AdminUsersPage>();
+            builder.Services.AddTransient<TestCreatePage>();
+            builder.Services.AddTransient<TestExecutionPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

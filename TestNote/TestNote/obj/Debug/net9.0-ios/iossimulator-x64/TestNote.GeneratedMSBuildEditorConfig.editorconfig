@@ -112,3 +112,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.ManagerCreatePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ManagerCreatePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ManagerCreatePage.xaml
+
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/TestCreatePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.TestCreatePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TestCreatePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TestCreatePage.xaml
+
+[C:/Users/rafae/OneDrive/Documentos/FACULDADE/Desenvolvimento de Aplicações em Ambientes Móveis/TestNote/TestNote/TestNote/Views/TestExecutionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestNote.Views.TestExecutionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TestExecutionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TestExecutionPage.xaml
