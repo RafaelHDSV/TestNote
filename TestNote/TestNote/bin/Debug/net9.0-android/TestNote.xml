@@ -1,0 +1,554 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestNote</name>
+    </assembly>
+    <members>
+        <member name="M:TestNote.Services.DatabaseService.GetAllUsersAsync">
+            <summary>
+            Retorna todos os registros da tabela User.
+            </summary>
+        </member>
+        <member name="T:TestNote.ViewModels.AdminUsersViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.AdminUsersViewModel.AllUsers">
+            <inheritdoc cref="F:TestNote.ViewModels.AdminUsersViewModel.allUsers"/>
+        </member>
+        <member name="P:TestNote.ViewModels.AdminUsersViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.AdminUsersViewModel.isLoading"/>
+        </member>
+        <member name="T:TestNote.ViewModels.CompaniesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.Companies">
+            <inheritdoc cref="F:TestNote.ViewModels.CompaniesViewModel.companies"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.CompaniesViewModel.isLoading"/>
+        </member>
+        <member name="F:TestNote.ViewModels.CompaniesViewModel.goToUserListCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompaniesViewModel.GoToUserListCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.GoToUserListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompaniesViewModel.GoToUserList"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.CompaniesViewModel.goToCreateCompanyCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompaniesViewModel.GoToCreateCompanyCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.GoToCreateCompanyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompaniesViewModel.GoToCreateCompany"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.CompaniesViewModel.goToCreateManagerCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompaniesViewModel.GoToCreateManagerCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompaniesViewModel.GoToCreateManagerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompaniesViewModel.GoToCreateManager"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.CompanyCreateViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyCreateViewModel.Name">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyCreateViewModel.name"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyCreateViewModel.Owner">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyCreateViewModel.owner"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyCreateViewModel.Sector">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyCreateViewModel.sector"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyCreateViewModel.NumberOfEmployees">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyCreateViewModel.numberOfEmployees"/>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyCreateViewModel.saveCompanyCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyCreateViewModel.SaveCompanyCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyCreateViewModel.SaveCompanyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyCreateViewModel.SaveCompany"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.CompanyDetailViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyDetailViewModel.addManagerCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyDetailViewModel.AddManagerCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyDetailViewModel.AddManagerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyDetailViewModel.AddManagerAsync"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.CompanyEditViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.Company">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyEditViewModel.company"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.Name">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyEditViewModel.name"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.Owner">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyEditViewModel.owner"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.Sector">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyEditViewModel.sector"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.NumberOfEmployees">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyEditViewModel.numberOfEmployees"/>
+        </member>
+        <member name="M:TestNote.ViewModels.CompanyEditViewModel.OnCompanyChanged(TestNote.Models.Company)">
+            <summary>Executes the logic for when <see cref="P:TestNote.ViewModels.CompanyEditViewModel.Company"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TestNote.ViewModels.CompanyEditViewModel.Company"/> is changed.</remarks>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyEditViewModel.updateCompanyCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyEditViewModel.UpdateCompanyCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyEditViewModel.UpdateCompanyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyEditViewModel.UpdateCompany"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.CompanyTestsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.Company">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyTestsViewModel.company"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.Tests">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyTestsViewModel.tests"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.CompanyTestsViewModel.isLoading"/>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyTestsViewModel.goToCreateTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyTestsViewModel.GoToCreateTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.GoToCreateTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyTestsViewModel.GoToCreateTest"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyTestsViewModel.selectTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyTestsViewModel.SelectTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.SelectTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyTestsViewModel.SelectTest(TestNote.Models.Test)"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.CompanyTestsViewModel.goToExecuteTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.CompanyTestsViewModel.GoToExecuteTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.CompanyTestsViewModel.GoToExecuteTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TestNote.ViewModels.CompanyTestsViewModel.GoToExecuteTest(TestNote.Models.Test)"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.EmployeeCreateViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.Name">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeCreateViewModel.name"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.JobTitle">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeCreateViewModel.jobTitle"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.Email">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeCreateViewModel.email"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.Password">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeCreateViewModel.password"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.CompanyId">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeCreateViewModel.companyId"/>
+        </member>
+        <member name="F:TestNote.ViewModels.EmployeeCreateViewModel.saveEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.EmployeeCreateViewModel.SaveEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeCreateViewModel.SaveEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.EmployeeCreateViewModel.SaveEmployee"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.EmployeeEditViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.Employee">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeEditViewModel.employee"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.Name">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeEditViewModel.name"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.JobTitle">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeEditViewModel.jobTitle"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.Email">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeEditViewModel.email"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.Password">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeeEditViewModel.password"/>
+        </member>
+        <member name="M:TestNote.ViewModels.EmployeeEditViewModel.OnEmployeeChanged(TestNote.Models.Employee)">
+            <summary>Executes the logic for when <see cref="P:TestNote.ViewModels.EmployeeEditViewModel.Employee"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TestNote.ViewModels.EmployeeEditViewModel.Employee"/> is changed.</remarks>
+        </member>
+        <member name="F:TestNote.ViewModels.EmployeeEditViewModel.updateEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.EmployeeEditViewModel.UpdateEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeEditViewModel.UpdateEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.EmployeeEditViewModel.UpdateEmployee"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.EmployeesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.Company">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.company"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.Employees">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.employees"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.IsLoading">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.isLoading"/>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.SelectedEmployee">
+            <inheritdoc cref="F:TestNote.ViewModels.EmployeesViewModel.selectedEmployee"/>
+        </member>
+        <member name="F:TestNote.ViewModels.EmployeesViewModel.goToCreateEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.EmployeesViewModel.GoToCreateEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.GoToCreateEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.EmployeesViewModel.GoToCreateEmployee"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.EmployeesViewModel.selectEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.EmployeesViewModel.SelectEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeesViewModel.SelectEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TestNote.ViewModels.EmployeesViewModel.SelectEmployee(TestNote.Models.Employee)"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.EmployeeTestsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:TestNote.ViewModels.EmployeeTestsViewModel.openTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.EmployeeTestsViewModel.OpenTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.EmployeeTestsViewModel.OpenTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TestNote.ViewModels.EmployeeTestsViewModel.OpenTest(TestNote.Models.Test)"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.ManageEmployeesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId">
+            <inheritdoc cref="F:TestNote.ViewModels.ManageEmployeesViewModel.companyId"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.Employees">
+            <inheritdoc cref="F:TestNote.ViewModels.ManageEmployeesViewModel.employees"/>
+        </member>
+        <member name="M:TestNote.ViewModels.ManageEmployeesViewModel.OnCompanyIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CompanyId"/> is changed.</remarks>
+        </member>
+        <member name="F:TestNote.ViewModels.ManageEmployeesViewModel.loadEmployeesCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployeesCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployeesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.ManageEmployeesViewModel.LoadEmployees"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.ManageEmployeesViewModel.createEmployeeCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.ManageEmployeesViewModel.CreateEmployee"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.ManagerCreateViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.Name">
+            <inheritdoc cref="F:TestNote.ViewModels.ManagerCreateViewModel.name"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.Email">
+            <inheritdoc cref="F:TestNote.ViewModels.ManagerCreateViewModel.email"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.Password">
+            <inheritdoc cref="F:TestNote.ViewModels.ManagerCreateViewModel.password"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.Companies">
+            <inheritdoc cref="F:TestNote.ViewModels.ManagerCreateViewModel.companies"/>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.SelectedCompany">
+            <inheritdoc cref="F:TestNote.ViewModels.ManagerCreateViewModel.selectedCompany"/>
+        </member>
+        <member name="F:TestNote.ViewModels.ManagerCreateViewModel.saveManagerCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.ManagerCreateViewModel.SaveManagerCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.ManagerCreateViewModel.SaveManagerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.ManagerCreateViewModel.SaveManager"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.TestCreateViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.CompanyId">
+            <inheritdoc cref="F:TestNote.ViewModels.TestCreateViewModel.companyId"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.Title">
+            <inheritdoc cref="F:TestNote.ViewModels.TestCreateViewModel.title"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.Description">
+            <inheritdoc cref="F:TestNote.ViewModels.TestCreateViewModel.description"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.Items">
+            <inheritdoc cref="F:TestNote.ViewModels.TestCreateViewModel.items"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.NewItemText">
+            <inheritdoc cref="F:TestNote.ViewModels.TestCreateViewModel.newItemText"/>
+        </member>
+        <member name="F:TestNote.ViewModels.TestCreateViewModel.addItemCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.TestCreateViewModel.AddItemCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.AddItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.TestCreateViewModel.AddItem"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.TestCreateViewModel.removeItemCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.TestCreateViewModel.RemoveItemCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.RemoveItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TestNote.ViewModels.TestCreateViewModel.RemoveItem(System.String)"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.TestCreateViewModel.saveTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.TestCreateViewModel.SaveTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.TestCreateViewModel.SaveTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.TestCreateViewModel.SaveTest"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.TestExecutionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.Test">
+            <inheritdoc cref="F:TestNote.ViewModels.TestExecutionViewModel.test"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.CheckItems">
+            <inheritdoc cref="F:TestNote.ViewModels.TestExecutionViewModel.checkItems"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.ExecutionNotes">
+            <inheritdoc cref="F:TestNote.ViewModels.TestExecutionViewModel.executionNotes"/>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.CompletedCount">
+            <inheritdoc cref="F:TestNote.ViewModels.TestExecutionViewModel.completedCount"/>
+        </member>
+        <member name="M:TestNote.ViewModels.TestExecutionViewModel.OnTestChanged(TestNote.Models.Test)">
+            <summary>Executes the logic for when <see cref="P:TestNote.ViewModels.TestExecutionViewModel.Test"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TestNote.ViewModels.TestExecutionViewModel.Test"/> is changed.</remarks>
+        </member>
+        <member name="F:TestNote.ViewModels.TestExecutionViewModel.itemToggledCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.TestExecutionViewModel.ItemToggledCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.ItemToggledCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.TestExecutionViewModel.ItemToggled"/>.</summary>
+        </member>
+        <member name="F:TestNote.ViewModels.TestExecutionViewModel.completeTestCommand">
+            <summary>The backing field for <see cref="P:TestNote.ViewModels.TestExecutionViewModel.CompleteTestCommand"/>.</summary>
+        </member>
+        <member name="P:TestNote.ViewModels.TestExecutionViewModel.CompleteTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TestNote.ViewModels.TestExecutionViewModel.CompleteTest"/>.</summary>
+        </member>
+        <member name="T:TestNote.ViewModels.CheckItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:TestNote.ViewModels.CheckItem.Description">
+            <inheritdoc cref="F:TestNote.ViewModels.CheckItem.description"/>
+        </member>
+        <member name="P:TestNote.ViewModels.CheckItem.IsChecked">
+            <inheritdoc cref="F:TestNote.ViewModels.CheckItem.isChecked"/>
+        </member>
+        <member name="T:TestNote.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllUsers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllUsers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Companies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Companies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Sector">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Sector" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NumberOfEmployees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NumberOfEmployees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Company">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Company" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tests">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tests" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.JobTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "JobTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompanyId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompanyId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCompany">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCompany" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewItemText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewItemText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Test">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Test" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CheckItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CheckItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExecutionNotes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExecutionNotes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletionProgress">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletionProgress" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsChecked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsChecked" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllUsers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllUsers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Companies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Companies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Sector">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Sector" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NumberOfEmployees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NumberOfEmployees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Company">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Company" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tests">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tests" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.JobTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "JobTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompanyId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompanyId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCompany">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCompany" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewItemText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewItemText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Test">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Test" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CheckItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CheckItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExecutionNotes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExecutionNotes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletionProgress">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletionProgress" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsChecked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsChecked" generated properties.</summary>
+        </member>
+    </members>
+</doc>

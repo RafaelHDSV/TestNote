@@ -14,7 +14,6 @@ namespace TestNote.ViewModels
         [ObservableProperty]
         private Test test;
 
-        // Lista de itens para Checkbox (precisamos de um model auxiliar para controle de estado na tela)
         [ObservableProperty]
         private ObservableCollection<CheckItem> checkItems = [];
 
@@ -25,6 +24,7 @@ namespace TestNote.ViewModels
         [NotifyPropertyChangedFor(nameof(CompletionProgress))]
         private int completedCount;
 
+        public int TotalCount => CheckItems.Count;
         public double CompletionProgress => (double)CompletedCount / Math.Max(1, CheckItems.Count);
 
         public TestExecutionViewModel(DatabaseService dbService)
@@ -37,29 +37,30 @@ namespace TestNote.ViewModels
             if (value != null)
             {
                 CheckItems.Clear();
-                var completedList = value.CompletedItemsString.Split('|', StringSplitOptions.RemoveEmptyEntries).ToList();
+                var completedString = value.CompletedItemsString ?? string.Empty;
+                var completedList = completedString.Split('|', StringSplitOptions.RemoveEmptyEntries).ToList();
 
                 foreach (var item in value.TestItems)
                 {
                     CheckItems.Add(new CheckItem
                     {
                         Description = item,
-                        IsChecked = completedList.Contains(item) // Verifica se já estava concluído
+                        IsChecked = completedList.Contains(item)
                     });
                 }
                 ExecutionNotes = value.ExecutionNotes;
-                UpdateProgress(); // Calcula o progresso inicial
+                UpdateProgress();
+                OnPropertyChanged(nameof(TotalCount));
             }
         }
 
         [RelayCommand]
         private void ItemToggled()
         {
-            // Chamado quando um Checkbox é alterado
             UpdateProgress();
         }
 
-        private void UpdateProgress()
+        public void UpdateProgress()
         {
             CompletedCount = CheckItems.Count(i => i.IsChecked);
         }
@@ -69,29 +70,41 @@ namespace TestNote.ViewModels
         {
             if (Test == null) return;
 
-            // 1. Atualiza o Teste com novos dados
+            int currentChecked = CheckItems.Count(i => i.IsChecked);
+            int total = CheckItems.Count;
+
             Test.ExecutionNotes = ExecutionNotes;
-            Test.CompletedItemCount = CompletedCount;
-            Test.Status = CompletedCount == CheckItems.Count ? "Concluído" : "Em Andamento";
+            Test.CompletedItemCount = currentChecked;
+
+            if (currentChecked >= total && total > 0)
+            {
+                Test.Status = "Concluído";
+            }
+            else if (currentChecked > 0)
+            {
+                Test.Status = "Em Andamento";
+            }
+            else
+            {
+                Test.Status = "Pendente";
+            }
+
             Test.TestedAt = DateTime.Now;
 
-            // 2. Serializa itens concluídos de volta para o modelo
             var completedDescriptions = CheckItems
                 .Where(i => i.IsChecked)
                 .Select(i => i.Description);
 
             Test.CompletedItemsString = string.Join("|", completedDescriptions);
 
-            // 3. Salva no banco
             await _dbService.SaveItemAsync(Test);
 
-            await Shell.Current.DisplayAlert("Sucesso", $"Teste atualizado. Status: {Test.Status}", "OK");
+            await Shell.Current.DisplayAlert("Sucesso", $"Teste salvo.\nStatus: {Test.Status}", "OK");
             await Shell.Current.GoToAsync("..");
         }
     }
 
-    // Classe auxiliar para a tela
-    public partial class CheckItem : ObservableObject // Se estiver usando CommunityToolkit.MVVM
+    public partial class CheckItem : ObservableObject 
     {
         [ObservableProperty]
         private string description = string.Empty;

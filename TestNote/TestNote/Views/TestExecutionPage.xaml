@@ -46,7 +46,8 @@
                     <DataTemplate x:DataType="vm:CheckItem">
                         <HorizontalStackLayout Spacing="10" Padding="5">
                             <CheckBox IsChecked="{Binding IsChecked}" 
-                                      Color="#34C759" />
+                                      Color="#34C759"
+                                      CheckedChanged="OnCheckBoxChanged"/>
                             <Label Text="{Binding Description}" 
                                    VerticalOptions="Center" 
                                    FontSize="15"

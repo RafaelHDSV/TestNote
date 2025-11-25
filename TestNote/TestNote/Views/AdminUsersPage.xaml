@@ -13,29 +13,31 @@
         <CollectionView ItemsSource="{Binding AllUsers}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:User">
-                    <Border Margin="0,5" Padding="15" StrokeShape="RoundRectangle 8" BackgroundColor="White">
-                        <VerticalStackLayout Spacing="2">
-                            <HorizontalStackLayout Spacing="6">
-                                <Label Text="ID:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
-                                <Label Text="{Binding Id}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
-                            </HorizontalStackLayout>
+                    <Grid>
+                        <Border Margin="0,5" Padding="15" StrokeShape="RoundRectangle 8" BackgroundColor="White">
+                            <VerticalStackLayout Spacing="2">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="ID:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
+                                    <Label Text="{Binding Id}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
+                                </HorizontalStackLayout>
 
-                            <HorizontalStackLayout Spacing="6">
-                                <Label Text="Email:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
-                                <Label Text="{Binding Email}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
-                            </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Email:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
+                                    <Label Text="{Binding Email}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
+                                </HorizontalStackLayout>
 
-                            <HorizontalStackLayout Spacing="6">
-                                <Label Text="Senha:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
-                                <Label Text="{Binding Password}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
-                            </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Senha:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
+                                    <Label Text="{Binding Password}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
+                                </HorizontalStackLayout>
 
-                            <HorizontalStackLayout Spacing="6">
-                                <Label Text="Nível de Acesso:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
-                                <Label Text="{Binding Role, Converter={StaticResource RoleToNameConverter}}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </Border>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="Nível de Acesso:" FontSize="12" FontAttributes="Italic" TextColor="#000"/>
+                                    <Label Text="{Binding Role, Converter={StaticResource RoleToNameConverter}}" FontSize="12" FontAttributes="Bold" TextColor="#000"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Border>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

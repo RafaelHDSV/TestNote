@@ -9,4 +9,12 @@ public partial class TestExecutionPage : ContentPage
 		InitializeComponent();
         BindingContext = vm;
     }
+
+    public void OnCheckBoxChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (BindingContext is TestExecutionViewModel vm)
+        {
+            vm.UpdateProgress();
+        }
+    }
 }
