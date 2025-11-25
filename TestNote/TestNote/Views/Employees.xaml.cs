@@ -23,7 +23,7 @@ public partial class Employees : ContentPage
 
             if (BindingContext is EmployeesViewModel vm && _company != null)
             {
-                vm.Company = _company; // Atualiza a propriedade no VM
+                vm.Company = _company;
                 _ = vm.LoadEmployeesAsync(_company.Id);
             }
         }
@@ -34,7 +34,6 @@ public partial class Employees : ContentPage
         base.OnAppearing();
         if (BindingContext is EmployeesViewModel vm && vm.Company != null)
         {
-            // Força o recarregamento dos funcionários sempre que a página aparece (útil após criação ou edição)
             _ = vm.LoadEmployeesAsync(vm.Company.Id);
         }
     }

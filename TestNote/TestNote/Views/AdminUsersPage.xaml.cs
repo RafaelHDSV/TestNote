@@ -13,7 +13,6 @@ public partial class AdminUsersPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        // O BindingContext é o nosso ViewModel, chamamos o método de carregamento.
         if (BindingContext is AdminUsersViewModel vm)
         {
             await vm.LoadAllUsersAsync();

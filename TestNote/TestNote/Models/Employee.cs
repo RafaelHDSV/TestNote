@@ -23,10 +23,10 @@ namespace TestNote.Models
         public int CompanyId { get; set; }
 
         [Ignore]
-        public string Email { get; set; } = string.Empty; // Preenchido via Join lógico
+        public string Email { get; set; } = string.Empty;
 
         [Ignore]
-        public int AccessLevel { get; set; } = 3; // Padrão funcionário
+        public int AccessLevel { get; set; } = 3; 
 
         [Ignore]
         public string DisplayName => $"{Id} - {Name}";

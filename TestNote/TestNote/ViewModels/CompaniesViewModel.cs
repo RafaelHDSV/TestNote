@@ -18,7 +18,7 @@ namespace TestNote.ViewModels
         public ObservableCollection<Company> companies = [];
 
         [ObservableProperty]
-        public bool isLoading; // Corrigido para Campo Privado
+        public bool isLoading;
 
         private readonly DatabaseService _databaseService;
 

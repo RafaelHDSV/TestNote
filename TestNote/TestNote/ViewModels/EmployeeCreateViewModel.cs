@@ -21,7 +21,6 @@ namespace TestNote.ViewModels
         [ObservableProperty]
         private string password = string.Empty;
 
-        // Recebido via QueryProperty
         [ObservableProperty]
         private int companyId;
 
@@ -39,12 +38,9 @@ namespace TestNote.ViewModels
                 return;
             }
 
-            // Cria o Login (User) e o Perfil (Employee)
             await _dbService.CreateEmployeeAsync(Name, JobTitle, Email, Password, CompanyId);
 
             await Shell.Current.DisplayAlert("Sucesso", "Funcionário criado e vinculado!", "OK");
-
-            // Volta para a lista de funcionários
             await Shell.Current.GoToAsync("..");
         }
     }

@@ -9,7 +9,6 @@ namespace TestNote.Converters
         {
             if (value is string status)
             {
-                // Normaliza para evitar problemas com maiúsculas/minúsculas
                 return status.ToLower() switch
                 {
                     "concluído" or "concluido" or "aprovado" => Colors.Green,

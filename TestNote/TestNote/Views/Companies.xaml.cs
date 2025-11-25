@@ -18,11 +18,8 @@ public partial class Companies : ContentPage
     {
         base.OnAppearing();
 
-        // 1. Acessa o ViewModel
         if (BindingContext is CompaniesViewModel viewModel)
         {
-            // 2. Executa o comando de forma assíncrona.
-            // Isso chama LoadCompaniesAsync() no seu ViewModel.
             await viewModel.LoadCompaniesCommand.ExecuteAsync(null);
         }
     }
@@ -33,10 +30,8 @@ public partial class Companies : ContentPage
         if (company == null)
             return;
 
-        // Limpa a seleção
         ((CollectionView)sender).SelectedItem = null;
 
-        // Navegar para os detalhes
         await Shell.Current.GoToAsync(nameof(CompanyDetails), new Dictionary<string, object>
         {
             { "Company", company }

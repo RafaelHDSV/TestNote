@@ -5,12 +5,10 @@ using TestNote.Services;
 
 namespace TestNote.ViewModels
 {
-    // Tornar partial para usar o NotifyPropertyChange e o ObservableProperty
     public partial class AdminUsersViewModel : ObservableObject
     {
         private readonly DatabaseService _dbService;
 
-        // ⚠️ Agora esta lista é de objetos User
         [ObservableProperty]
         private ObservableCollection<User> allUsers = [];
 
@@ -26,14 +24,12 @@ namespace TestNote.ViewModels
         {
             IsLoading = true;
 
-            // ⚠️ Chama o novo método que busca a tabela User diretamente
             var users = await _dbService.GetAllUsersAsync();
 
             AllUsers = new ObservableCollection<User>(users);
             IsLoading = false;
         }
 
-        // Método auxiliar para conversão na View
         public string GetRoleName(int role)
         {
             return role switch

@@ -15,7 +15,6 @@ namespace TestNote.ViewModels
         [RelayCommand]
         private async Task OpenTest(Test test)
         {
-            // Se for funcionário e o teste estiver pendente, vai para execução
             await Shell.Current.GoToAsync(nameof(TestExecutionPage), new Dictionary<string, object>
             {
                 { "Test", test }

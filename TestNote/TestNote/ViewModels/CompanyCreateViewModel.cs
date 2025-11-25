@@ -46,7 +46,6 @@ namespace TestNote.ViewModels
             await _dbService.SaveItemAsync(newCompany);
             await Shell.Current.DisplayAlert("Sucesso", "Empresa criada!", "OK");
 
-            // Volta para a lista anterior
             await Shell.Current.GoToAsync("..");
         }
     }

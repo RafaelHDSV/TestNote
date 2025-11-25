@@ -23,16 +23,12 @@ public partial class CompanyDetails : ContentPage
     public CompanyDetails(CompanyDetailViewModel viewModel)
     {
         InitializeComponent();
-
-        // Definimos o BindingContext aqui. 
-        // O MAUI já entregou o viewModel com o DatabaseService configurado.
         BindingContext = viewModel;
     }
         
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        // Força a UI a ler as propriedades novamente caso tenham mudado
         if (BindingContext is CompanyDetailViewModel vm)
         {
             vm.Refresh();

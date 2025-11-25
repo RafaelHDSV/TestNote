@@ -15,7 +15,6 @@ namespace TestNote.Models
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         
-        // Status: "Pendente", "Em Andamento", "Concluído", "Aprovado", "Reprovado"
         public string Status { get; set; } = "Pendente";
         [Indexed(Name = "Idx_Test_CompanyId", Unique = false)]
         public int CompanyId { get; set; }
@@ -35,7 +34,7 @@ namespace TestNote.Models
             get
             {
                 if (string.IsNullOrEmpty(TestItemsString))
-                    return new List<string>(); // Retorna lista vazia se nulo
+                    return new List<string>();
 
                 return TestItemsString.Split('|', StringSplitOptions.RemoveEmptyEntries).ToList();
             }
@@ -63,7 +62,7 @@ namespace TestNote.Models
             {
                 if (Status == "Concluído" || CompletionPercentage == 100) return Color.FromArgb("#34C759"); // Verde
                 if (Status == "Em Andamento") return Color.FromArgb("#FF9500"); // Laranja
-                return Color.FromArgb("#555555"); // Cinza (Pendente)
+                return Color.FromArgb("#555555"); s// Cinza
             }
         }
 

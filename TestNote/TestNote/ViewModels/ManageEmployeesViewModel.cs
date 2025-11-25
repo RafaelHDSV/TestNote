@@ -27,7 +27,6 @@ namespace TestNote.ViewModels
             _dbService = dbService;
         }
 
-        // Carrega funcionários quando o ID da empresa chega
         partial void OnCompanyIdChanged(int value)
         {
             LoadEmployees();
@@ -43,15 +42,14 @@ namespace TestNote.ViewModels
         [RelayCommand]
         private async Task CreateEmployee()
         {
-            // Exemplo simplificado com Prompt
             string name = await Shell.Current.DisplayPromptAsync("Novo Func", "Nome:");
             string email = await Shell.Current.DisplayPromptAsync("Novo Func", "Email:");
-            string pass = "123"; // Senha padrão ou pede via prompt
+            string pass = "123"; 
 
             if (!string.IsNullOrEmpty(name))
             {
                 await _dbService.CreateEmployeeAsync(name, "Cargo Padrão", email, pass, CompanyId);
-                await LoadEmployees(); // Recarrega a lista
+                await LoadEmployees(); 
             }
         }
     }

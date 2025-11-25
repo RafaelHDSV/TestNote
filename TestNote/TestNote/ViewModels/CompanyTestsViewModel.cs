@@ -42,8 +42,6 @@ namespace TestNote.ViewModels
         private async Task GoToCreateTest()
         {
             if (Company == null) return;
-
-            // Navega para tela de criação
             await Shell.Current.GoToAsync($"{nameof(TestCreatePage)}?companyId={Company.Id}");
         }
 
@@ -51,8 +49,6 @@ namespace TestNote.ViewModels
         private async Task SelectTest(Test test)
         {
             if (test == null) return;
-            // Navega para detalhes/edição do teste
-            // await Shell.Current.GoToAsync($"{nameof(TestEditPage)}?testId={test.Id}");
             await Shell.Current.DisplayAlert("Teste Selecionado", test.Title, "OK");
         }
 
@@ -62,7 +58,6 @@ namespace TestNote.ViewModels
             if (test == null)
                 return;
 
-            // Navega para a página de execução, passando o objeto Test selecionado
             await Shell.Current.GoToAsync(nameof(TestExecutionPage), new Dictionary<string, object>
             {
                 { "Test", test }

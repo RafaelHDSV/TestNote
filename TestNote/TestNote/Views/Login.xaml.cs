@@ -29,12 +29,11 @@ public partial class Login : ContentPage
             return;
         }
 
-        if (user.Role == 1) // Admin
+        if (user.Role == 1)
         {
-            // Admin vê todas as empresas
             await Shell.Current.GoToAsync($"{nameof(Companies)}");
         }
-        else if (user.Role == 2) // Manager
+        else if (user.Role == 2)
         {
             var managerProfile = await _databaseService.GetManagerByUserIdAsync(user.Id);
 
@@ -59,19 +58,16 @@ public partial class Login : ContentPage
                 await DisplayAlert("Erro", "Perfil de gerente não encontrado.", "OK");
             }
         }
-        else if (user.Role == 3) // Employee
+        else if (user.Role == 3)
         {
             var empProfile = await _databaseService.GetEmployeeByUserIdAsync(user.Id);
 
             if (empProfile != null)
             {
-                // 1. O funcionário precisa da Empresa à qual está vinculado
                 var company = await _databaseService.GetItemAsync<Company>(empProfile.CompanyId);
 
                 if (company != null)
                 {
-                    // 2. Redireciona para a tela de Testes da Empresa
-                    // O CompanyTests usa o QueryProperty "Company"
                     await Shell.Current.GoToAsync(nameof(CompanyTests), new Dictionary<string, object>
                       {
                         { "Company", company }
@@ -79,13 +75,11 @@ public partial class Login : ContentPage
                 }
                 else
                 {
-                    // Se o perfil do funcionário existe, mas a empresa não
                     await DisplayAlert("Erro de Acesso", "Empresa vinculada não encontrada para seu perfil.", "OK");
                 }
             }
             else
             {
-                // Se o perfil do funcionário não existe
                 await DisplayAlert("Erro de Acesso", "Perfil de funcionário não encontrado.", "OK");
             }
         }

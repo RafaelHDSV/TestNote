@@ -20,18 +20,15 @@ namespace TestNote.ViewModels
         [ObservableProperty]
         private string password = string.Empty;
 
-        // Lista de empresas para o Picker
         [ObservableProperty]
         private ObservableCollection<Company> companies = [];
 
-        // Empresa selecionada no Picker
         [ObservableProperty]
         private Company? selectedCompany;
 
         public ManagerCreateViewModel(DatabaseService dbService)
         {
             _dbService = dbService;
-            // Carrega as empresas assim que o VM é criado
             _ = LoadCompanies();
         }
 
@@ -56,7 +53,6 @@ namespace TestNote.ViewModels
                 return;
             }
 
-            // Cria o Login e o Perfil de Manager
             await _dbService.CreateManagerAsync(Name, Email, Password, SelectedCompany.Id);
 
             await Shell.Current.DisplayAlert("Sucesso", "Gerente criado e vinculado!", "OK");

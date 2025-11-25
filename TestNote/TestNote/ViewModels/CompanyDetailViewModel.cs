@@ -42,7 +42,6 @@ public partial class CompanyDetailViewModel : INotifyPropertyChanged
     {
         if (Company == null) return;
 
-        // Navega para a tela de edição passando a empresa atual
         await Shell.Current.GoToAsync(nameof(CompanyEditPage), new Dictionary<string, object>
         {
             { "Company", Company }
@@ -56,7 +55,6 @@ public partial class CompanyDetailViewModel : INotifyPropertyChanged
 
     private async void OnOpenTests()
     {
-        // ⚠️ Navegar para listagem de testes desta empresa, passando a Company
         await Shell.Current.GoToAsync(
             $"{nameof(CompanyTests)}?companyId={Company!.Id}",
             new Dictionary<string, object>
@@ -67,7 +65,6 @@ public partial class CompanyDetailViewModel : INotifyPropertyChanged
 
     private async void OnOpenEmployees()
     {
-        // Navegar para listagem de funcionários desta empresa
         await Shell.Current.GoToAsync(
            $"{nameof(Employees)}?companyId={Company!.Id}",
            new Dictionary<string, object>
@@ -84,22 +81,18 @@ public partial class CompanyDetailViewModel : INotifyPropertyChanged
     [RelayCommand]
     private async Task AddManagerAsync()
     {
-        // Simplesmente pede os dados via Prompt para agilizar o exemplo. 
-        // O ideal seria uma tela de cadastro dedicada.
         string name = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Nome do Gerente:");
         string email = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Email de Login:");
         string pass = await Shell.Current.DisplayPromptAsync("Novo Gerente", "Senha:");
 
         if (!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(email))
         {
-            // Chama o método específico do Service
             await _databaseService.CreateManagerAsync(name, email, pass, Company.Id);
             await Shell.Current.DisplayAlert("Sucesso", "Gerente criado!", "OK");
         }
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
-    // ⚠️ CORRIGIDO: Renomeado de 'd' para 'OnPropertyChanged'
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }

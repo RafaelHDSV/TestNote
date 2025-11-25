@@ -36,15 +36,8 @@ namespace TestNote.ViewModels
         public async Task LoadEmployeesAsync(int companyId)
         {
             IsLoading = true;
-
-            // 1. Removemos a lista fixa 'allEmployeesData' que causava os erros CS0117.
-
-            // 2. Buscamos do banco de dados usando o método que criamos no passo anterior
             var dbEmployees = await _databaseService.GetEmployeesByCompanyAsync(companyId);
-
-            // 3. Atualizamos a lista observável
             Employees = new ObservableCollection<Employee>(dbEmployees);
-
             IsLoading = false;
         }
 
@@ -57,7 +50,6 @@ namespace TestNote.ViewModels
                 return;
             }
 
-            // Navega para a página de criação de funcionário, passando a CompanyId
             await Shell.Current.GoToAsync($"{nameof(EmployeeCreatePage)}?companyId={Company.Id}");
         }
 
@@ -66,13 +58,11 @@ namespace TestNote.ViewModels
         {
             if (employee == null) return;
 
-            // Navega para a página de edição, passando o objeto Employee
             await Shell.Current.GoToAsync(nameof(EmployeeEditPage), new Dictionary<string, object>
             {
                 { "Employee", employee }
             });
 
-            // Limpa a seleção após navegar
             SelectedEmployee = null;
         }
     }

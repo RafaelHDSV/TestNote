@@ -21,7 +21,6 @@ namespace TestNote.ViewModels
         [ObservableProperty]
         private string description = string.Empty;
 
-        // Lista de itens que o gerente está adicionando
         [ObservableProperty]
         private ObservableCollection<string> items = [];
 
@@ -69,7 +68,6 @@ namespace TestNote.ViewModels
                 TestItems = Items.ToList(),
                 Status = "Pendente",
                 CreatedAt = DateTime.Now
-                // CreatorId deveria vir do usuário logado (UserSession)
             };
 
             await _dbService.CreateTestAsync(newTest);

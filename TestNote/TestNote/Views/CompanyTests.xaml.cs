@@ -11,7 +11,7 @@ public partial class CompanyTests : ContentPage
     public CompanyTests(CompanyTestsViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; // Define o BindingContext aqui
+        BindingContext = viewModel;
     }
 
     public Company? Company
@@ -21,10 +21,9 @@ public partial class CompanyTests : ContentPage
         {
             _company = value;
 
-            // ⚠️ CORREÇÃO: Usa o ViewModel já existente no BindingContext
             if (BindingContext is CompanyTestsViewModel vm && _company != null)
             {
-                vm.Company = _company; // Atualiza a propriedade no VM
+                vm.Company = _company; 
             }
         }
     }
