@@ -1,7 +1,5 @@
 # 📝 TestNote: Gerenciamento de Testes e Checklists
 
-O TestNote é um aplicativo móvel (Android, iOS) e desktop (Windows, macOS) para gerenciamento de testes de qualidade ou checklists operacionais. Ele permite que gerentes criem testes detalhados com listas de verificação (checklists), e que funcionários os executem e reportem o progresso, salvando os resultados em um banco de dados local.
-
 <p align="center">
  <img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/2c801d17-8524-4472-a3ec-ea99ddcce732" />
 </p>
