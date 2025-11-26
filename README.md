@@ -2,27 +2,27 @@
 
 O TestNote é um aplicativo móvel (Android, iOS) e desktop (Windows, macOS) para gerenciamento de testes de qualidade ou checklists operacionais. Ele permite que gerentes criem testes detalhados com listas de verificação (checklists), e que funcionários os executem e reportem o progresso, salvando os resultados em um banco de dados local.
 
-\<p align="center"\>
-\<img width="500" height="300" alt="Exemplo da interface de Execução de Teste do TestNote" src="[Placeholder para Screenshot da Execução de Teste]" /\>
-\</p\>
+<p align="center">
+ <img width="500" height="300" alt="Exemplo da interface de Execução de Teste do TestNote" src="[Placeholder para Screenshot da Execução de Teste]" />
+</p>
 
-\<p align="center"\>
-\<a href="\#about"\>📌 Sobre\</a\> •
-\<a href="\#features"\>✨ Funcionalidades\</a\> •
-\<a href="\#started"\>🚀 Como Executar\</a\> •
-\<a href="\#architecture"\>📐 Arquitetura\</a\> •
-\<a href="\#screenshots"\>📷 Screenshots\</a\>
-\</p\>
+<p align="center">
+<a href="#about">📌 Sobre</a> •
+<a href="#features">✨ Funcionalidades</a> •
+<a href="#started">🚀 Como Executar</a> •
+<a href="#architecture">📐 Arquitetura</a> •
+<a href="#screenshots">📷 Screenshots</a>
+</p>
 
 -----
 
-\<h2 id="about"\>📌 Sobre o Projeto\</h2\>
+<h2 id="about">📌 Sobre o Projeto</h2>
 
 TestNote é uma aplicação **Cross-Platform** desenvolvida utilizando **.NET MAUI** e a arquitetura **MVVM (Model-View-ViewModel)**. O objetivo principal é fornecer uma ferramenta robusta para o gerenciamento do ciclo de vida de testes operacionais ou de qualidade, desde a **criação** pelo gerente até a **execução** e **monitoramento** pelo funcionário.
 
 ### Tecnologias Principais
 
-  * **Linguagem:** C\#
+  * **Linguagem:** C#
   * **Framework:** .NET MAUI (.NET 8)
   * **Padrão de Projeto:** MVVM (usando CommunityToolkit.Mvvm)
   * **Banco de Dados:** SQLite (com sqlite-net-pcl)
@@ -30,22 +30,22 @@ TestNote é uma aplicação **Cross-Platform** desenvolvida utilizando **.NET MA
 
 -----
 
-\<h2 id="features"\>✨ Funcionalidades\</h2\>
+<h2 id="features">✨ Funcionalidades</h2>
 
 O sistema é dividido em três perfis de acesso, cada um com responsabilidades e funcionalidades específicas:
 
-### 1\. 👑 Administrador (Super Admin)
+### 1. 👑 Administrador (Super Admin)
 
   * **Gerenciamento de Empresas:** CRUD completo de empresas.
   * **Gestão de Usuários:** Criação e gerenciamento de Gerentes e Funcionários.
 
-### 2\. 👨‍💼 Gerente
+### 2. 👨‍💼 Gerente
 
   * **Criação de Testes:** Criação de novos testes, definindo Título, Descrição, Seção (`Section`) e o checklist de itens (`TestItems`).
   * **Visualização de Testes:** Acesso a todos os testes da sua empresa.
   * **Rastreamento:** Visualização do Status (`Pendente`, `Em Andamento`, `Concluído`) e quem executou (`TestedBy`).
 
-### 3\. 👷 Funcionário
+### 3. 👷 Funcionário
 
   * **Lista de Testes:** Visualiza os testes pendentes ou em andamento atribuídos à sua empresa.
   * **Execução de Teste:**
@@ -60,7 +60,7 @@ O sistema é dividido em três perfis de acesso, cada um com responsabilidades e
 
 -----
 
-\<h2 id="started"\>🚀 Como Executar o Projeto\</h2\>
+<h2 id="started">🚀 Como Executar o Projeto</h2>
 
 ### Pré-requisitos
 
@@ -92,21 +92,21 @@ O sistema é dividido em três perfis de acesso, cada um com responsabilidades e
 
 O banco de dados SQLite será criado automaticamente e populado com o usuário administrador padrão:
 
-\<details\>
-\<summary\>Usuário administrador para login\</summary\>
+<details>
+<summary>Usuário administrador para login</summary>
 
 ```
   Email = "admin@sistema.com",
   Senha = "123",
 ```
 
-\</details\>
+</details>
 
 > Uma vez logado como administrador, você pode criar empresas, gerentes e funcionários para testar os diferentes perfis de acesso e o ciclo de vida dos testes.
 
 -----
 
-\<h2 id="architecture"\>📐 Arquitetura do Projeto\</h2\>
+<h2 id="architecture">📐 Arquitetura do Projeto</h2>
 
 O projeto segue estritamente o padrão MVVM, o que facilita a separação de responsabilidades e a testabilidade do código.
 
@@ -132,12 +132,12 @@ TestNote/
 
 -----
 
-\<h2 id="screenshots"\>📷 Screenshots\</h2\>
+<h2 id="screenshots">📷 Screenshots</h2>
 
 [Insira aqui as screenshots do seu projeto TestNote, como a tela de login, a lista de testes, e a tela de execução do checklist.]
 
-\<img width="1086" height="816" alt="image" src="[https://www.youtube.com/watch?v=CdQpToy5hZQ](https://www.youtube.com/watch?v=CdQpToy5hZQ)" /\>
-\<img width="1086" height="816" alt="image" src="[https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7](https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7)" /\>
-\<img width="1086" height="816" alt="image" src="[https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera\_fig5\_268163041](https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera_fig5_268163041)" /\>
+<img width="1086" height="816" alt="image" src="[https://www.youtube.com/watch?v=CdQpToy5hZQ](https://www.youtube.com/watch?v=CdQpToy5hZQ)" />
+<img width="1086" height="816" alt="image" src="[https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7](https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7)" />
+<img width="1086" height="816" alt="image" src="[https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera_fig5_268163041](https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera_fig5_268163041)" />
 
-\<p align="center"\> Desenvolvido com ❤️ por [Seu nome de usuário(s) do GitHub]\</p\>
+<p align="center"> Desenvolvido com ❤️ por [Seu nome de usuário(s) do GitHub]</p>
