@@ -3,7 +3,7 @@
 O TestNote é um aplicativo móvel (Android, iOS) e desktop (Windows, macOS) para gerenciamento de testes de qualidade ou checklists operacionais. Ele permite que gerentes criem testes detalhados com listas de verificação (checklists), e que funcionários os executem e reportem o progresso, salvando os resultados em um banco de dados local.
 
 <p align="center">
- <img width="500" height="300" alt="Exemplo da interface de Execução de Teste do TestNote" src="[Placeholder para Screenshot da Execução de Teste]" />
+ <img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/2c801d17-8524-4472-a3ec-ea99ddcce732" />
 </p>
 
 <p align="center">
@@ -134,7 +134,13 @@ TestNote/
 
 <h2 id="screenshots">📷 Screenshots</h2>
 
-[Insira aqui as screenshots do seu projeto TestNote, como a tela de login, a lista de testes, e a tela de execução do checklist.]
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/4440327c-9269-4aeb-8f0b-5ff5b20f3d14" />
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/71ab3806-1640-4864-a9e0-e8c460499dd6" />
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/1b71437a-1fdc-402c-8199-e22e065d3f2a" />
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/9dfa68ef-5581-4de4-8614-ece2afe0c3c1" />
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/4ea8b498-47cf-48e8-9620-054f36f8e4ec" />
+<img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/e732ce33-eeb5-4e07-b285-eb71ee57c1a2" />
+
 
 <img width="1086" height="816" alt="image" src="[https://www.youtube.com/watch?v=CdQpToy5hZQ](https://www.youtube.com/watch?v=CdQpToy5hZQ)" />
 <img width="1086" height="816" alt="image" src="[https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7](https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7)" />
