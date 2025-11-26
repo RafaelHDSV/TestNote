@@ -141,9 +141,4 @@ TestNote/
 <img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/4ea8b498-47cf-48e8-9620-054f36f8e4ec" />
 <img width="680" height="720" alt="image" src="https://github.com/user-attachments/assets/e732ce33-eeb5-4e07-b285-eb71ee57c1a2" />
 
-
-<img width="1086" height="816" alt="image" src="[https://www.youtube.com/watch?v=CdQpToy5hZQ](https://www.youtube.com/watch?v=CdQpToy5hZQ)" />
-<img width="1086" height="816" alt="image" src="[https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7](https://medium.com/android-dev-br/utilizando-testes-de-snapshot-2fa770903ed7)" />
-<img width="1086" height="816" alt="image" src="[https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera_fig5_268163041](https://www.researchgate.net/figure/Figura-5-Tela-de-Execucao-de-Plano-de-Teste-A-tela-de-execucao-de-plano-de-teste-contera_fig5_268163041)" />
-
-<p align="center"> Desenvolvido com ❤️ por [Seu nome de usuário(s) do GitHub]</p>
+<p align="center"> Desenvolvido com ❤️ por <a href="https://github.com/RafaelHDSV">RafaelHDSV</a>, <a href="https://github.com/Rafasouza03">Rafasouza03</a> e <a href="https://github.com/MatheusTakenaka">MatheusTakenaka</a></p>
