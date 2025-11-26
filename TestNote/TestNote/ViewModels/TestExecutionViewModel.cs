@@ -70,6 +70,16 @@ namespace TestNote.ViewModels
         {
             if (Test == null) return;
 
+            if (UserSession.CurrentEmployeeProfile != null)
+            {
+                Test.TestedBy = UserSession.CurrentEmployeeProfile.Name;
+                Test.ExecutorId = UserSession.CurrentEmployeeProfile.UserId;
+            }
+            else if (UserSession.CurrentUser != null)
+            {
+                Test.TestedBy = UserSession.CurrentUser.Email;
+            }
+
             int currentChecked = CheckItems.Count(i => i.IsChecked);
             int total = CheckItems.Count;
 

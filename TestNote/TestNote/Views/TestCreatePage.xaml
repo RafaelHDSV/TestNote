@@ -19,6 +19,11 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="8">
+                <Label Text="Seção / Departamento:"/>
+                <Entry Placeholder="Ex: Financeiro, TI..." Text="{Binding Section}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="8">
                 <Label Text="Itens de Verificação (Checklist):" FontAttributes="Bold" />
                 <Grid ColumnDefinitions="*, Auto" ColumnSpacing="16">
                     <Entry Grid.Column="0" Placeholder="Adicionar item" Text="{Binding NewItemText}" ReturnCommand="{Binding AddItemCommand}"/>

@@ -26,6 +26,9 @@ namespace TestNote.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? TestedAt { get; set; }
 
+        public string TestedBy { get; set; } = string.Empty;
+        public string Section { get; set; } = string.Empty;
+
         public string TestItemsString { get; set; } = string.Empty;
 
         [Ignore]
@@ -62,7 +65,7 @@ namespace TestNote.Models
             {
                 if (Status == "Concluído" || CompletionPercentage == 100) return Color.FromArgb("#34C759"); // Verde
                 if (Status == "Em Andamento") return Color.FromArgb("#FF9500"); // Laranja
-                return Color.FromArgb("#555555"); s// Cinza
+                return Color.FromArgb("#555555"); // Cinza
             }
         }
 

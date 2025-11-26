@@ -67,6 +67,27 @@
                                            FontSize="13"/>
                                 </HorizontalStackLayout>
 
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Descrição:" FontAttributes="Bold" TextColor="#555" FontSize="13"/>
+                                    <Label Text="{Binding Description}" 
+                                           TextColor="#444" 
+                                           FontSize="13"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Seção:" FontAttributes="Bold" TextColor="#555" FontSize="13"/>
+                                    <Label Text="{Binding Section}" 
+                                           TextColor="#444" 
+                                           FontSize="13"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Testado por:" FontAttributes="Bold" TextColor="#555" FontSize="13"/>
+                                    <Label Text="{Binding TestedBy}" 
+                                           TextColor="#444" 
+                                           FontSize="13"/>
+                                </HorizontalStackLayout>
+
                                 <Label Text="Itens do Teste:" FontAttributes="Bold" FontSize="13" TextColor="#555"/>
                                 <VerticalStackLayout BindableLayout.ItemsSource="{Binding TestItems}" Spacing="4" Margin="10,0,0,0">
                                     <BindableLayout.ItemTemplate>

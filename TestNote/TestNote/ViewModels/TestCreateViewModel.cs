@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Design;
 using TestNote.Models;
 using TestNote.Services;
+using static System.Collections.Specialized.BitVector32;
 
 namespace TestNote.ViewModels
 {
@@ -26,6 +27,9 @@ namespace TestNote.ViewModels
 
         [ObservableProperty]
         private string newItemText = string.Empty;
+
+        [ObservableProperty]
+        private string section = string.Empty;
 
         public TestCreateViewModel(DatabaseService dbService)
         {
@@ -67,6 +71,7 @@ namespace TestNote.ViewModels
                 Description = Description,
                 TestItems = Items.ToList(),
                 Status = "Pendente",
+                Section = Section,
                 CreatedAt = DateTime.Now
             };
 

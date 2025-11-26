@@ -184,5 +184,28 @@ namespace TestNote.Services
             await InitializeAsync();
             await SaveItemAsync(test);
         }
+
+        public async Task FixMissingDataAsync()
+        {
+            await InitializeAsync();
+
+            // 1. Busca todos os testes que estão com a Seção vazia ou nula
+            var testsToFix = await _database.Table<Test>()
+                                            .Where(t => t.Section == null || t.Section == "")
+                                            .ToListAsync();
+
+            if (testsToFix.Count > 0)
+            {
+                // 2. Atualiza um por um
+                foreach (var test in testsToFix)
+                {
+                    test.Section = "Geral"; // Define uma seção padrão
+                    await _database.UpdateAsync(test);
+                }
+
+                // Opcional: Avisa no console
+                System.Diagnostics.Debug.WriteLine($"CORREÇÃO: {testsToFix.Count} testes foram atualizados com a seção 'Geral'.");
+            }
+        }
     }
 }

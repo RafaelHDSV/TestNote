@@ -11,17 +11,23 @@ public partial class Login : ContentPage
     public Login()
 	{
 		InitializeComponent();
-
+        
         var serviceProvider = Application.Current?.Handler?.MauiContext?.Services;
         if (serviceProvider != null)
         {
             _databaseService = serviceProvider.GetService<DatabaseService>()!;
+            _ = _databaseService.FixMissingDataAsync();
         }
     }
 
     async void LoginFunction(object sender, EventArgs e)
     {
         var user = await _databaseService.LoginAsync(EmailEntry.Text, PasswordEntry.Text);
+
+        if (user != null)
+        {
+            UserSession.CurrentUser = user;
+        }
 
         if (user == null)
         {
